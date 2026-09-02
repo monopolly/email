@@ -1,0 +1,1031 @@
+Delivered-To: lava.mobi@gmail.com
+Received: by 2002:a05:7010:60c4:b0:37a:1d98:89ad with SMTP id p4csp309204mdd;
+        Thu, 14 Sep 2023 22:18:49 -0700 (PDT)
+X-Received: by 2002:a4a:3c02:0:b0:573:4e21:5d25 with SMTP id d2-20020a4a3c02000000b005734e215d25mr620009ooa.9.1694755128754;
+        Thu, 14 Sep 2023 22:18:48 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1694755128; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=ziNZPNVbxiHPcSN058ggGhM5K2WLVPL24aHu0FSbLjRBqWLj1wvSirrBqqPVztfviV
+         fSznPzuNizNV9FVqAHF8v99Doink+lwU5c3S/KbNOHU1TY93xfJP86z5LRiNq9GJ/MUk
+         FcRNXspIj60LjK5WsgBcmzKuMjx0N9HJEUB/KSlQZoa2Mdj+rbD7trK9aq2I/oeVOubb
+         PT7V88CyFMfTG1irEVMq+mfnU6Q6coasmqiWPSatNb8yI8kwotvdEwXG9fxy4+DIK8yn
+         aGpOfsM5TrjRclKZC2kYfE3wghxhTqifMGLH0KjGUiSztXoEFbiW5suowSNn3OmTJNbJ
+         V4BQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=user-id:list-id:list-unsubscribe:content-transfer-encoding
+         :mime-version:subject:message-id:to:from:date:dkim-signature
+         :delivered-to;
+        bh=HotcI6vyHh0xvlEicD20HBhpZRI8WwbZniGpFpF1DCA=;
+        fh=oHWh3HcY0zHIsYOBmZgX+STJ7crkxUwxt6AXVfejbxU=;
+        b=fJY3GmL29k6zDbrmK7wu7UtyELHDimaiEmLX2utA1Wq5N8mGKXveRgIVffRVkBcqQQ
+         KDI1XbpvcG3TN77w6pn1lkQPYUTqWSswGcZ+MJ56nsAmdH2H6ePWab0Q8j5rBg2ZsGEq
+         Ao2EF7jrVfBvC4KCvPpp1K7gZT5B7LksJIigmWz/qpPH6Ayr6pcKNzHopK3pC/b6C2P3
+         s+ik4ElLpopno0TKul2fQNvpZ5JOzY3GnySIrIoCHoA1OfjRphMnx9ZJl0LYXPFSJCSS
+         kgAY7TmENHMAUkQtI3STusShm86nGjYk65plH44B0Np29nef9P/pwr70zqBoZS4rOvaW
+         3L9g==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@e-xecutive.ru header.s=dkim header.b=L8SMtiQ3;
+       arc=pass (i=1 spf=pass spfdomain=e-xecutive.ru dkim=pass dkdomain=e-xecutive.ru dmarc=pass fromdomain=e-xecutive.ru);
+       spf=pass (google.com: domain of wire.common+caf_=lava.mobi=gmail.com@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom="wire.common+caf_=lava.mobi=gmail.com@gmail.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=e-xecutive.ru
+Return-Path: <wire.common+caf_=lava.mobi=gmail.com@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id r77-20020a4a3750000000b0056c8738f7a0sor1391991oor.1.2023.09.14.22.18.48
+        for <lava.mobi@gmail.com>
+        (Google Transport Security);
+        Thu, 14 Sep 2023 22:18:48 -0700 (PDT)
+Received-SPF: pass (google.com: domain of wire.common+caf_=lava.mobi=gmail.com@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@e-xecutive.ru header.s=dkim header.b=L8SMtiQ3;
+       arc=pass (i=1 spf=pass spfdomain=e-xecutive.ru dkim=pass dkdomain=e-xecutive.ru dmarc=pass fromdomain=e-xecutive.ru);
+       spf=pass (google.com: domain of wire.common+caf_=lava.mobi=gmail.com@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom="wire.common+caf_=lava.mobi=gmail.com@gmail.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=e-xecutive.ru
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1694755128; x=1695359928;
+        h=user-id:list-id:list-unsubscribe:content-transfer-encoding
+         :mime-version:subject:message-id:to:from:date:dkim-signature
+         :delivered-to:x-forwarded-for:x-forwarded-to:x-gm-message-state:from
+         :to:cc:subject:date:message-id:reply-to;
+        bh=HotcI6vyHh0xvlEicD20HBhpZRI8WwbZniGpFpF1DCA=;
+        b=SVwL8t4vtodrC56DYhIFlXBxhQavyqNwMJDIc4SAVK46dYq0dJwlFjfTlxSefr5Qpd
+         LrVN+ezxxtC5uL0F9xw0qxCz8cz9m8rlJ4gru8lI7Qf6N0gFXAg9gy/XXJBS0dYAVCHI
+         BAUIFmuPqitBA5FgbZ+rz4HtzhyCCygqUYi6opvoQGBkDv3fjeoMgI90+aRMe/zI/IpA
+         t4IAJiMeoGYBQAm6WNpqETOo+RCpXTfRzd22crAPY/Qc+o+RfUGcAzw+iDkJO4pTo8QR
+         gl43pn2m6d/HqINn4rCoYDT3Z887D1Rdz489RJ3UnZOi9+cEHEhakT/0RdwoZAw0f/CS
+         7ckw==
+X-Gm-Message-State: AOJu0YxAadktstSwxfFb0+OI5eIL/+M0wLvetEW6t1YYueP8c1vVb2pB
+	h5uNA6k2tT1F2Jvj41a6ZKhiKT0OUe4viAkiff+sdUoeHc9IL4+npQ==
+X-Received: by 2002:a4a:870e:0:b0:571:23ce:a4af with SMTP id z14-20020a4a870e000000b0057123cea4afmr703237ooh.3.1694755128264;
+        Thu, 14 Sep 2023 22:18:48 -0700 (PDT)
+X-Forwarded-To: lava.mobi@gmail.com
+X-Forwarded-For: wire.common@gmail.com lava.mobi@gmail.com
+Delivered-To: wire.common@gmail.com
+Received: by 2002:a8a:128c:0:b0:4f6:606c:5cb9 with SMTP id p12csp86092ocs;
+        Thu, 14 Sep 2023 22:18:47 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFVmcGRvRbz1rnSGToyfAFtqmahA+J3VTMmc/H6cjlz9lkZTWWg4povvafZxxdxCt7/QpG1
+X-Received: by 2002:ac2:48a5:0:b0:4ff:ad35:8dce with SMTP id u5-20020ac248a5000000b004ffad358dcemr567905lfg.22.1694755126697;
+        Thu, 14 Sep 2023 22:18:46 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1694755126; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YdMv9D8orVoreQtNz1VHKR9Ic+GXoZphfbP5BXYOEFD6HoFU4jUo00/QvN+6BencXt
+         2poEGkClM2IMYtrbpy74Lgnv4k2G+D4rXXHl9xO9kySosnXOFRZSn3RyXmCOp7Kv9veA
+         lf8dEzt2Z0gbskmdxmtPhs7AL0hjLb5NvxCdv2zFTt8TbWnTUA5P1LVGeOgt51w86ZUO
+         UGRhNbBwuGfK+20qazwm8k8joXmOUJHEc5UHuRh4Lb6XN+X1MWUZR/0YvfuYvvllsb7G
+         w2m76pMtQd2Q8Jk+rBUxcQnjwBHM0ohPVupJZ3yd1H9sZTed/Y+bAj3J8OTF0fUEtbh5
+         90NA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=user-id:list-id:list-unsubscribe:content-transfer-encoding
+         :mime-version:subject:message-id:to:from:date:dkim-signature;
+        bh=HotcI6vyHh0xvlEicD20HBhpZRI8WwbZniGpFpF1DCA=;
+        fh=oHWh3HcY0zHIsYOBmZgX+STJ7crkxUwxt6AXVfejbxU=;
+        b=WuRgg1OnlEx2DNEOAvmTz5X3ASOrPHFWZKk3QNmGcFvrvfPUaZ7KlCnQjwn5f1l+gs
+         g7jfQyhaMnlycgzxnAQPlmcEiTRXmJPEYdxn2v32V4GnzVfXFnQ9lfbRhO+0xJqdtngT
+         O2e2lmLXnwg7xhKe/NxgKs2ubG20/loDuexHMblER3sQDnk2Nejd7D3n4hOzrkwCAqUY
+         9TXk/Bo0cLNE9QRCN4cYw/a62ZkoSCqBmIssKGjy2TSn4etg2YPT4Gu15KatGIWZ0H93
+         iJJvlOEdzh6xFfbwGLK+DBxnIlggO4lFKFNegzGgAmIvk2KMLJ8MbON/1IWwfFtdt1F8
+         5/+A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@e-xecutive.ru header.s=dkim header.b=L8SMtiQ3;
+       spf=pass (google.com: domain of management@e-xecutive.ru designates 91.221.70.58 as permitted sender) smtp.mailfrom=management@e-xecutive.ru;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=e-xecutive.ru
+Return-Path: <management@e-xecutive.ru>
+Received: from spb.e-xecutive.ru (e-xecutive.ru. [91.221.70.58])
+        by mx.google.com with ESMTPS id i27-20020ac2523b000000b00502d2a31ab3si902045lfl.476.2023.09.14.22.18.46
+        for <wire.common@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 14 Sep 2023 22:18:46 -0700 (PDT)
+Received-SPF: pass (google.com: domain of management@e-xecutive.ru designates 91.221.70.58 as permitted sender) client-ip=91.221.70.58;
+Received: from localhost.localdomain (localhost [127.0.0.1])
+	by spb.e-xecutive.ru (Postfix) with ESMTP id 24A1C13C3F64
+	for <wire.common@gmail.com>; Fri, 15 Sep 2023 08:18:46 +0300 (MSK)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=e-xecutive.ru;
+	s=dkim; t=1694755126;
+	bh=HotcI6vyHh0xvlEicD20HBhpZRI8WwbZniGpFpF1DCA=;
+	h=Date:From:To:Subject:List-Unsubscribe:List-id;
+	b=L8SMtiQ3hOFuQxoVgbebcwOyIvpnrrsu3YlYEpYg2rn07fiVzKPMfS4TujYp+aKvk
+	 gr2qxUJN5Hw7AnYLL40oZatRWRkkZJ03nIJ9Is/h1Nrhkmg+wBByGQYGKR9kH2+WDP
+	 sf95Bz2FcMOM7V+qmMS+L1JT4PRCd/tmjwgXh/34=
+Date: Fri, 15 Sep 2023 08:18:46 +0300
+From: "Executive.ru" <management@e-xecutive.ru>
+To: wire.common@gmail.com
+Message-ID: <6503e93611103_1b303f9c93e0f53c20225119a@spb.mail>
+Subject: =?UTF-8?Q?=D0=A1=D0=BA=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE?=
+ =?UTF-8?Q?_=D1=81=D1=82=D0=BE=D0=B8=D1=82_=D0=BD=D0=B0=D1=88=D0=B5?=
+ =?UTF-8?Q?_=D0=B2=D1=80=D0=B5=D0=BC=D1=8F?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+List-Unsubscribe: <http://www.e-xecutive.ru/unsubscribes/U1Mxa25BYVJpS01DM0lYQWtsWnMvaU92aFQwSFdldnJ6L2g3bExuU0QxRnlOT0sxMWdwOTRsdXNWRWNuVEl2My0tR1JHSVNlNDg4VTdJem9ZUTVxRlpoZz09--ef6fe2f1aec478c8cb28ad588ec82c5783bff3a5/unsubscribe?list_id=6>
+List-id: September 2023 menedzhment <6-menedzhment.e-xecutive.ru>
+User-id: 1795743
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">=
+
+<style>
+  @media only screen and (min-width: 620px) {
+    .p-header {
+      text-align: justify !important; }
+  =
+
+    .p-header__title {
+      text-align: right !important; } }
+</style>
+</head>
+<body style=3D"margin: 0; padding: 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" bgcolor=3D"#fffff=
+f" style=3D"padding:0;margin:0;border:0 none;background:#ffffff;width:100=
+%;font: 14px  Arial, Helvetica, sans-serif; color: #000000;" align=3D"cen=
+ter" width=3D"100%">
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"640" sty=
+le=3D"padding:0;margin:0;border:0 none;width:640px;">
+<tr>
+<td border=3D"0" height=3D"10" style=3D"padding:0;margin:0;border:0 none;=
+height: 10px;">
+<span style=3D"font-size:1px;color:#ffffff;">
+=D0=97=D0=B4=D1=80=D0=B0=D0=B2=D1=81=D1=82=D0=B2=D1=83=D0=B9=D1=82=D0=B5,=
+ =D0=A1=D0=B5=D1=80=D0=B3=D0=B5=D0=B9!
+=D0=A4=D0=BE=D1=80=D0=BC=D1=83=D0=BB=D0=B0 =C2=AB=D0=B2=D1=80=D0=B5=D0=BC=
+=D1=8F =E2=80=94 =D0=B4=D0=B5=D0=BD=D1=8C=D0=B3=D0=B8=C2=BB =D0=B7=D0=B2=D1=
+=83=D1=87=D0=B8=D1=82 =D0=BE=D0=B1=D0=BC=D0=B0=D0=BD=D1=87=D0=B8=D0=B2=D0=
+=BE =D0=BF=D1=80=D0=BE=D1=81=D1=82=D0=BE. =D0=A7=D1=82=D0=BE =D0=BD=D0=B5=
+ =D1=82=D0=B0=D0=BA =D1=81 =D0=BF=D0=BE=D0=BC=D0=B8=D0=BD=D1=83=D1=82=D0=BD=
+=D1=8B=D0=BC =D1=82=D0=B0=D0=B9=D0=BC-=D0=BC=D0=B5=D0=BD=D0=B5=D0=B4=D0=B6=
+=D0=BC=D0=B5=D0=BD=D1=82=D0=BE=D0=BC?
+</span>
+</td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" =
+style=3D"padding:0;margin:0;border:0 none;width:100%;margin: 0 auto; max-=
+width: 800px;" width=3D"100%">
+<tr>
+<td border=3D"0" width=3D"640" style=3D"padding:0;margin:0;border:0 none;=
+width: 640px;min-width: 640px;">
+<img src=3D"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC=
+1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=3D" style=3D"display=
+:block; width: 640px; height: 1px; border: 0 none; margin: auto;">
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" =
+width=3D"100%" style=3D"padding:0;margin:0;border:0 none;width:100%;">
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;"><table borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" style=3D"pad=
+ding:0;margin:0;border:0 none;width:100%;margin: 0 auto; max-width: 620px=
+; font-size: 0; line-height: 0;" width=3D"100%">
+<tr>
+<td border=3D"0" valign=3D"bottom" style=3D"padding:0;margin:0;border:0 n=
+one;vertical-align: bottom;text-align: justify; font-size:0; line-height:=
+ 0;" class=3D"p-header">
+<span style=3D"display: inline-block; vertical-align: bottom; padding: 5p=
+x 0; margin-right: 10px;">
+<a style=3D"text-decoration: none;" href=3D"https://www.e-xecutive.ru/sta=
+ts/click?user_id=3D1795743&letter_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xec=
+utive.ru%2F%3Futm_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm_source=
+%3Demail"><img alt=3D"E-xecutive.ru" border=3D"0" style=3D"display: block=
+" src=3D"https://www.e-xecutive.ru/assets/logo-37e2eca812c2784387412ec2a9=
+9f445f053e16ea2b57ca369261c81a53dd7638.png" width=3D"240" height=3D"42">
+</a></span>
+<span class=3D"p-header__title" style=3D"display: inline-block; vertical-=
+align: bottom; padding: 5px 0; text-align: right;">
+<span style=3D"font-size: 25px; line-height: 28px; color: #000000;">=D0=9C=
+=D0=B5=D0=BD=D0=B5=D0=B4=D0=B6=D0=BC=D0=B5=D0=BD=D1=82</span><br><span st=
+yle=3D"display: inline-block; font-size: 13px; line-height: 15px; color: =
+#999999;">=D0=9F=D1=8F=D1=82=D0=BD=D0=B8=D1=86=D0=B0. 15 =D1=81=D0=B5=D0=BD=
+=D1=82=D1=8F=D0=B1=D1=80=D1=8F 2023 =D0=B3=D0=BE=D0=B4=D0=B0</span>
+</span>
+<span style=3D"display: inline-block; width: 100%; font-size: 0px; line-h=
+eight: 0px;">=C2=A0</span>
+</td>
+</tr>
+<tr>
+<td border=3D"0" height=3D"0" style=3D"padding:0;margin:0;border:0 none;h=
+eight: 0px;border-bottom: 2px solid #ebebeb;">
+<span style=3D"display: none;">=C2=A0</span>
+</td>
+</tr>
+</table></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" =
+width=3D"100%" style=3D"padding:0;margin:0;border:0 none;width:100%;">
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;"><table borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" style=3D"pad=
+ding:0;margin:0;border:0 none;width:100%;margin: 0 auto; max-width: 620px=
+;" width=3D"100%">
+<tr><td border=3D"0" height=3D"14" style=3D"padding:0;margin:0;border:0 n=
+one;height: 14px;"></td></tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;font: 14px/20p=
+x Arial, Helvetica, sans-serif; color: #262626;">
+<p style=3D"display: block; margin: 0; padding-top: 7px; padding-bottom: =
+7px; font: 14px/20px Arial, Helvetica, sans-serif; color: #262626;">=D0=97=
+=D0=B4=D1=80=D0=B0=D0=B2=D1=81=D1=82=D0=B2=D1=83=D0=B9=D1=82=D0=B5, =D0=A1=
+=D0=B5=D1=80=D0=B3=D0=B5=D0=B9!</p>
+</td>
+</tr>
+<tr>
+<td border=3D"0" height=3D"14" style=3D"padding:0;margin:0;border:0 none;=
+height: 14px;border-bottom: 1px solid #ebebeb">
+<span style=3D"display: none;">=C2=A0</span>
+</td>
+</tr>
+</table></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" st=
+yle=3D"padding:0;margin:0;border:0 none;width:100%;">
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;"><table borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" style=3D"pad=
+ding:0;margin:0;border:0 none;width:100%;margin: 0 auto; max-width: 620px=
+;" width=3D"100%">
+<tr><td border=3D"0" height=3D"20" style=3D"padding:0;margin:0;border:0 n=
+one;height: 20px;"></td></tr>
+<tr>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;vertical-align: top;">
+<span style=3D"display: inline-block; width: 50%; vertical-align: top; mi=
+n-width: 300px; padding-bottom: 10px;"><a style=3D"text-decoration: none;=
+ color: #2667c1" href=3D"https://www.e-xecutive.ru/stats/click?user_id=3D=
+1795743&letter_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2Fcareer%2=
+Flichnaya-effektivnost%2F1996653-skolko-stoit-nashe-vremya%3Futm_campaign=
+%3D4380%26utm_medium%3Dmenedzhment%26utm_source%3Demail"><img alt=3D"=D0=A1=
+=D0=BA=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE =D1=81=D1=82=D0=BE=D0=B8=D1=82 =D0=BD=
+=D0=B0=D1=88=D0=B5 =D0=B2=D1=80=D0=B5=D0=BC=D1=8F" style=3D"max-width: 10=
+0%; height: auto;;display: block" border=3D"0" src=3D"https://www.e-xecut=
+ive.ru/uploads/article/image/1996653/mini_time.jpg" width=3D"300" height=3D=
+"200"></a></span><span style=3D"display: inline-block; width: 50%; vertic=
+al-align: top; min-width: 310px;"><a style=3D"font: normal 20px/24px Aria=
+l, Helvetica, sans-serif; color: #2667c1; text-decoration: none;" href=3D=
+"https://www.e-xecutive.ru/stats/click?user_id=3D1795743&letter_id=3D4380=
+&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2Fcareer%2Flichnaya-effektivnost%2=
+F1996653-skolko-stoit-nashe-vremya%3Futm_campaign%3D4380%26utm_medium%3Dm=
+enedzhment%26utm_source%3Demail">=D0=A1=D0=BA=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE=
+ =D1=81=D1=82=D0=BE=D0=B8=D1=82 =D0=BD=D0=B0=D1=88=D0=B5 =D0=B2=D1=80=D0=B5=
+=D0=BC=D1=8F</a><br>
+<br>
+<span style=3D"font: normal 16px/20px Arial, Helvetica, sans-serif; color=
+: #262626;">=D0=A4=D0=BE=D1=80=D0=BC=D1=83=D0=BB=D0=B0 =C2=AB=D0=B2=D1=80=
+=D0=B5=D0=BC=D1=8F =E2=80=94 =D0=B4=D0=B5=D0=BD=D1=8C=D0=B3=D0=B8=C2=BB =D0=
+=B7=D0=B2=D1=83=D1=87=D0=B8=D1=82 =D0=BE=D0=B1=D0=BC=D0=B0=D0=BD=D1=87=D0=
+=B8=D0=B2=D0=BE =D0=BF=D1=80=D0=BE=D1=81=D1=82=D0=BE. =D0=A7=D1=82=D0=BE =
+=D0=BD=D0=B5 =D1=82=D0=B0=D0=BA =D1=81 =D0=BF=D0=BE=D0=BC=D0=B8=D0=BD=D1=83=
+=D1=82=D0=BD=D1=8B=D0=BC =D1=82=D0=B0=D0=B9=D0=BC-=D0=BC=D0=B5=D0=BD=D0=B5=
+=D0=B4=D0=B6=D0=BC=D0=B5=D0=BD=D1=82=D0=BE=D0=BC?</span></span>
+</td>
+</tr>
+<tr><td border=3D"0" height=3D"25" style=3D"padding:0;margin:0;border:0 n=
+one;height: 25px;"></td></tr>
+</table></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" =
+width=3D"100%" style=3D"padding:0;margin:0;border:0 none;width:100%;">
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;"><table borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" align=3D"cente=
+r" style=3D"padding:0;margin:0;border:0 none;width:100%;margin: 0 auto; m=
+ax-width: 620px; width: 100%; table-layout: fixed;">
+<tr>
+<td border=3D"0" height=3D"25" style=3D"padding:0;margin:0;border:0 none;=
+height: 25px;width: 26.612903225%"></td>
+<td border=3D"0" height=3D"25" style=3D"padding:0;margin:0;border:0 none;=
+height: 25px;width: 3%"></td>
+<td border=3D"0" height=3D"25" style=3D"padding:0;margin:0;border:0 none;=
+height: 25px;"></td>
+</tr>
+<tr>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;vertical-align: top;width: 26.612903225%"><a style=3D"text-decoration: n=
+one; color: #2667c1" href=3D"https://www.e-xecutive.ru/stats/click?user_i=
+d=3D1795743&letter_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2Feduc=
+ation%2Fmbarus%2F1996648-komu-i-dlya-chego-nuzhna-programma-dba%3Futm_cam=
+paign%3D4380%26utm_medium%3Dmenedzhment%26utm_source%3Demail"><img alt=3D=
+"=D0=9A=D0=BE=D0=BC=D1=83 =D0=B8 =D0=B4=D0=BB=D1=8F =D1=87=D0=B5=D0=B3=D0=
+=BE =D0=BD=D1=83=D0=B6=D0=BD=D0=B0 =D0=BF=D1=80=D0=BE=D0=B3=D1=80=D0=B0=D0=
+=BC=D0=BC=D0=B0 DBA" style=3D"max-width: 100%; height: auto;;display: blo=
+ck" border=3D"0" src=3D"https://www.e-xecutive.ru/uploads/article/image/1=
+996648/mini_business.jpg" width=3D"165" height=3D"112">
+</a></td>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;width: 3%"></t=
+d>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;width: autopx;vertical-align: top;width: auto;" width=3D"auto"><table bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"pa=
+dding:0;margin:0;border:0 none;width:100%;">
+<tr>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;vertical-align: top;">
+<a style=3D"font: 18px/20px Arial, Helvetica, sans-serif; color: #2667c1;=
+ text-decoration: none;" href=3D"https://www.e-xecutive.ru/stats/click?us=
+er_id=3D1795743&letter_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2F=
+education%2Fmbarus%2F1996648-komu-i-dlya-chego-nuzhna-programma-dba%3Futm=
+_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm_source%3Demail">=D0=9A=D0=
+=BE=D0=BC=D1=83 =D0=B8 =D0=B4=D0=BB=D1=8F =D1=87=D0=B5=D0=B3=D0=BE =D0=BD=
+=D1=83=D0=B6=D0=BD=D0=B0 =D0=BF=D1=80=D0=BE=D0=B3=D1=80=D0=B0=D0=BC=D0=BC=
+=D0=B0 DBA</a>
+</td>
+</tr>
+<tr>
+<td border=3D"0" height=3D"8" style=3D"padding:0;margin:0;border:0 none;h=
+eight: 8px;"></td>
+</tr>
+<tr>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;vertical-align: top;">
+<span style=3D"font: 14px/20px Arial, Helvetica, sans-serif; color: #2626=
+26;">=D0=A7=D1=82=D0=BE =D1=81=D0=BB=D1=83=D1=88=D0=B0=D1=82=D0=B5=D0=BB=D0=
+=B8 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=8E=D1=82 =D0=B2 =D1=80=D0=B5=D0=
+=B7=D1=83=D0=BB=D1=8C=D1=82=D0=B0=D1=82=D0=B5 =D1=83=D1=87=D0=B5=D0=B1=D1=
+=8B? =D0=98 =D0=BA=D0=B0=D0=BA =D0=BC=D0=B5=D0=BD=D1=8F=D1=8E=D1=82=D1=81=
+=D1=8F =D0=B8=D1=85 =D0=B2=D0=B7=D0=B3=D0=BB=D1=8F=D0=B4=D1=8B =D0=BD=D0=B0=
+ =D0=B1=D0=B8=D0=B7=D0=BD=D0=B5=D1=81 =D0=BF=D0=BE=D1=81=D0=BB=D0=B5 =D0=BF=
+=D0=BE=D0=BB=D1=83=D1=87=D0=B5=D0=BD=D0=B8=D1=8F =D0=B4=D0=B8=D0=BF=D0=BB=
+=D0=BE=D0=BC=D0=B0?</span>
+</td>
+</tr>
+</table></td>
+</tr>
+
+<tr>
+<td border=3D"0" height=3D"25" style=3D"padding:0;margin:0;border:0 none;=
+height: 25px;width: 26.612903225%"></td>
+<td border=3D"0" height=3D"25" style=3D"padding:0;margin:0;border:0 none;=
+height: 25px;width: 3%"></td>
+<td border=3D"0" height=3D"25" style=3D"padding:0;margin:0;border:0 none;=
+height: 25px;"></td>
+</tr>
+<tr>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;vertical-align: top;width: 26.612903225%"><a style=3D"text-decoration: n=
+one; color: #2667c1" href=3D"https://www.e-xecutive.ru/stats/click?user_i=
+d=3D1795743&letter_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2Fnews=
+%2F2097293-otstavki-i-naznacheniya-za-nedelu-14-sentyabrya-2023-goda%3Fut=
+m_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm_source%3Demail"><img a=
+lt=3D"=D0=9E=D1=82=D1=81=D1=82=D0=B0=D0=B2=D0=BA=D0=B8 =D0=B8 =D0=BD=D0=B0=
+=D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D1=8F =D0=B7=D0=B0 =D0=BD=D0=B5=
+=D0=B4=D0=B5=D0=BB=D1=8E. 14 =D1=81=D0=B5=D0=BD=D1=82=D1=8F=D0=B1=D1=80=D1=
+=8F 2023 =D0=B3=D0=BE=D0=B4=D0=B0" style=3D"max-width: 100%; height: auto=
+;;display: block" border=3D"0" src=3D"https://www.e-xecutive.ru/uploads/n=
+ews/image/2097293/mini_molchanov.jpeg" width=3D"165" height=3D"112">
+</a></td>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;width: 3%"></t=
+d>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;width: autopx;vertical-align: top;width: auto;" width=3D"auto"><table bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"pa=
+dding:0;margin:0;border:0 none;width:100%;">
+<tr>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;vertical-align: top;">
+<a style=3D"font: 18px/20px Arial, Helvetica, sans-serif; color: #2667c1;=
+ text-decoration: none;" href=3D"https://www.e-xecutive.ru/stats/click?us=
+er_id=3D1795743&letter_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2F=
+news%2F2097293-otstavki-i-naznacheniya-za-nedelu-14-sentyabrya-2023-goda%=
+3Futm_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm_source%3Demail">=D0=
+=9E=D1=82=D1=81=D1=82=D0=B0=D0=B2=D0=BA=D0=B8 =D0=B8 =D0=BD=D0=B0=D0=B7=D0=
+=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D1=8F =D0=B7=D0=B0 =D0=BD=D0=B5=D0=B4=D0=
+=B5=D0=BB=D1=8E. 14 =D1=81=D0=B5=D0=BD=D1=82=D1=8F=D0=B1=D1=80=D1=8F 2023=
+ =D0=B3=D0=BE=D0=B4=D0=B0</a>
+</td>
+</tr>
+<tr>
+<td border=3D"0" height=3D"8" style=3D"padding:0;margin:0;border:0 none;h=
+eight: 8px;"></td>
+</tr>
+<tr>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;vertical-align: top;">
+<span style=3D"font: 14px/20px Arial, Helvetica, sans-serif; color: #2626=
+26;">=D0=9D=D0=B0=D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D1=8B =D0=BD=D0=BE=D0=
+=B2=D1=8B=D0=B5 =D1=82=D0=BE=D0=BF-=D0=BC=D0=B5=D0=BD=D0=B5=D0=B4=D0=B6=D0=
+=B5=D1=80=D1=8B =D0=B2 =D0=BA=D0=BE=D0=BC=D0=BF=D0=B0=D0=BD=D0=B8=D1=8F=D1=
+=85 =C2=AB=D0=98=D0=B3=D1=80=D0=BE=D0=BD=D0=B8=D0=BA=C2=BB, =C2=AB=D0=93=D0=
+=B0=D0=BB=D1=81-=D0=94=D0=B5=D0=B2=D0=B5=D0=BB=D0=BE=D0=BF=D0=BC=D0=B5=D0=
+=BD=D1=82=C2=BB =D0=B8 =C2=AB=D0=91=D0=B0=D0=BB=D1=82=D0=B8=D0=BA=D0=B0=C2=
+=BB. =D0=92=D1=8B=D0=BF=D1=83=D1=81=D0=BA =D0=BA=D0=B0=D0=B4=D1=80=D0=BE=D0=
+=B2=D0=BE=D0=B3=D0=BE =D0=B4=D0=B0=D0=B9=D0=B4=D0=B6=D0=B5=D1=81=D1=82=D0=
+=B0 Executive.ru.</span>
+</td>
+</tr>
+</table></td>
+</tr>
+
+<tr>
+<td border=3D"0" height=3D"25" style=3D"padding:0;margin:0;border:0 none;=
+height: 25px;width: 26.612903225%"></td>
+<td border=3D"0" height=3D"25" style=3D"padding:0;margin:0;border:0 none;=
+height: 25px;width: 3%"></td>
+<td border=3D"0" height=3D"25" style=3D"padding:0;margin:0;border:0 none;=
+height: 25px;"></td>
+</tr>
+<tr>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;vertical-align: top;width: 26.612903225%"><a style=3D"text-decoration: n=
+one; color: #2667c1" href=3D"https://www.e-xecutive.ru/stats/click?user_i=
+d=3D1795743&letter_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2Fmana=
+gement%2Fmarket%2F1996651-delovaya-vstrecha-hr-den-stolichnogo-biznesa%3F=
+utm_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm_source%3Demail"><img=
+ alt=3D"=D0=94=D0=B5=D0=BB=D0=BE=D0=B2=D0=B0=D1=8F =D0=B2=D1=81=D1=82=D1=80=
+=D0=B5=D1=87=D0=B0 =C2=ABHR-=D0=B4=D0=B5=D0=BD=D1=8C =D1=81=D1=82=D0=BE=D0=
+=BB=D0=B8=D1=87=D0=BD=D0=BE=D0=B3=D0=BE =D0=B1=D0=B8=D0=B7=D0=BD=D0=B5=D1=
+=81=D0=B0=C2=BB" style=3D"max-width: 100%; height: auto;;display: block" =
+border=3D"0" src=3D"https://www.e-xecutive.ru/uploads/article/image/19966=
+51/mini_tehnopolis-moskva.jpg" width=3D"165" height=3D"112">
+</a></td>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;width: 3%"></t=
+d>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;width: autopx;vertical-align: top;width: auto;" width=3D"auto"><table bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"pa=
+dding:0;margin:0;border:0 none;width:100%;">
+<tr>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;vertical-align: top;">
+<a style=3D"font: 18px/20px Arial, Helvetica, sans-serif; color: #2667c1;=
+ text-decoration: none;" href=3D"https://www.e-xecutive.ru/stats/click?us=
+er_id=3D1795743&letter_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2F=
+management%2Fmarket%2F1996651-delovaya-vstrecha-hr-den-stolichnogo-biznes=
+a%3Futm_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm_source%3Demail">=
+=D0=94=D0=B5=D0=BB=D0=BE=D0=B2=D0=B0=D1=8F =D0=B2=D1=81=D1=82=D1=80=D0=B5=
+=D1=87=D0=B0 =C2=ABHR-=D0=B4=D0=B5=D0=BD=D1=8C =D1=81=D1=82=D0=BE=D0=BB=D0=
+=B8=D1=87=D0=BD=D0=BE=D0=B3=D0=BE =D0=B1=D0=B8=D0=B7=D0=BD=D0=B5=D1=81=D0=
+=B0=C2=BB</a>
+</td>
+</tr>
+<tr>
+<td border=3D"0" height=3D"8" style=3D"padding:0;margin:0;border:0 none;h=
+eight: 8px;"></td>
+</tr>
+<tr>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;vertical-align: top;">
+<span style=3D"font: 14px/20px Arial, Helvetica, sans-serif; color: #2626=
+26;">=D0=9D=D0=B0 =D0=BC=D0=B5=D1=80=D0=BE=D0=BF=D1=80=D0=B8=D1=8F=D1=82=D0=
+=B8=D0=B8 =D0=BE=D0=B1=D1=81=D1=83=D0=B4=D1=8F=D1=82 =D0=B0=D0=BA=D1=82=D1=
+=83=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D0=B5 =D0=B2=D0=BE=D0=BF=D1=80=D0=BE=D1=
+=81=D1=8B =D1=83=D0=BF=D1=80=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D1=8F =D0=
+=BF=D0=B5=D1=80=D1=81=D0=BE=D0=BD=D0=B0=D0=BB=D0=BE=D0=BC, =D1=80=D0=B0=D0=
+=B7=D0=B2=D0=B8=D1=82=D0=B8=D1=8F =D1=87=D0=B5=D0=BB=D0=BE=D0=B2=D0=B5=D1=
+=87=D0=B5=D1=81=D0=BA=D0=BE=D0=B3=D0=BE =D0=BA=D0=B0=D0=BF=D0=B8=D1=82=D0=
+=B0=D0=BB=D0=B0, =D0=B0 =D1=82=D0=B0=D0=BA=D0=B6=D0=B5 =D0=BC=D0=B5=D1=80=
+=D1=8B =D0=BF=D0=BE=D0=B4=D0=B4=D0=B5=D1=80=D0=B6=D0=BA=D0=B8 =D0=B1=D0=B8=
+=D0=B7=D0=BD=D0=B5=D1=81=D0=B0 =D1=81=D0=BE =D1=81=D1=82=D0=BE=D1=80=D0=BE=
+=D0=BD=D1=8B =D0=9F=D1=80=D0=B0=D0=B2=D0=B8=D1=82=D0=B5=D0=BB=D1=8C=D1=81=
+=D1=82=D0=B2=D0=B0 =D0=9C=D0=BE=D1=81=D0=BA=D0=B2=D1=8B.</span>
+</td>
+</tr>
+</table></td>
+</tr>
+
+<tr>
+<td border=3D"0" height=3D"20" style=3D"padding:0;margin:0;border:0 none;=
+height: 20px;width: 26.612903220%"></td>
+<td border=3D"0" height=3D"20" style=3D"padding:0;margin:0;border:0 none;=
+height: 20px;width: 3%"></td>
+<td border=3D"0" height=3D"20" style=3D"padding:0;margin:0;border:0 none;=
+height: 20px;"></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" st=
+yle=3D"padding:0;margin:0;border:0 none;width:100%;">
+<tr><td border=3D"0" height=3D"35" style=3D"padding:0;margin:0;border:0 n=
+one;height: 35px;"></td></tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" bgcolor=3D"#efefe=
+f" width=3D"100%" style=3D"padding:0;margin:0;border:0 none;background:#e=
+fefef;width:100%;"><tr><td border=3D"0" style=3D"padding:0;margin:0;borde=
+r:0 none;padding: 10px 0;" align=3D"center"><table border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" align=3D"center" style=3D"padding:0;margin:0;b=
+order:0 none;width:100%;margin: 0 auto; max-width: 620px" width=3D"100%">=
+<tr><td border=3D"0" style=3D"padding:0;margin:0;border:0 none;"><span st=
+yle=3D"font-weight: bold; font-size: 15px; font-family: Arial, Helvetica,=
+ sans-serif; line-height: 17px; color: #000000; text-transform: uppercase=
+;">=D0=9C=D0=B5=D1=80=D0=BE=D0=BF=D1=80=D0=B8=D1=8F=D1=82=D0=B8=D1=8F</sp=
+an></td></tr></table></td></tr></table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" =
+style=3D"padding:0;margin:0;border:0 none;width:100%;margin: 0 auto; max-=
+width: 620px;" width=3D"100%">
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;padding-top: 1=
+7px; padding-bottom: 17px; border-bottom: 1px solid #dddddd"><table borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"paddi=
+ng:0;margin:0;border:0 none;width:100%;">
+<tr>
+<td border=3D"0" width=3D"65" valign=3D"top" style=3D"padding:0;margin:0;=
+border:0 none;width: 65px;vertical-align: top;"><table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"padding:0;margin:0=
+;border:0 none;width:100%;">
+<tr>
+<td border=3D"0" height=3D"22" align=3D"center" bgcolor=3D"#1d5bb8" style=
+=3D"padding:0;margin:0;border:0 none;height: 22px;text-align: center; lin=
+e-height: 22px; font-size: 12px; font-weight: 500; color: #ffffff; backgr=
+ound-color: #1d5bb8; font-family: Arial, Helvetica, sans-serif;">=D1=81=D0=
+=B5=D0=BD=D1=82=D1=8F=D0=B1=D1=80=D1=8F
+</td>
+</tr>
+<tr>
+<td border=3D"0" height=3D"42" align=3D"center" bgcolor=3D"#fafafa" style=
+=3D"padding:0;margin:0;border:0 none;height: 42px;text-align: center; lin=
+e-height: 42px; font-size: 22px; font-weight: normal; color: #000000; fon=
+t-family: Arial, Helvetica, sans-serif;">27
+</td>
+</tr>
+</table></td>
+<td border=3D"0" width=3D"20" style=3D"padding:0;margin:0;border:0 none;w=
+idth: 20px;min-width: 20px;">=C2=A0
+</td>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;vertical-align: top;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%" style=3D"padding:0;margin:0;border:0 none;width:100%;"=
+>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;padding-top: 4=
+px; padding-bottom: 4px;">
+<span style=3D"font-size: 10px; font-family: Arial, Helvetica, sans-serif=
+; color: #858585; text-transform: uppercase; line-height: 14px; margin-ri=
+ght: 12px;">=D0=9E=D1=82=D0=BA=D1=80=D1=8B=D1=82=D1=8B=D0=B9</span><a sty=
+le=3D"font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-he=
+ight: 16px; color: #2667c1; text-decoration: none; margin-right: 12px;" h=
+ref=3D"https://www.e-xecutive.ru/stats/click?user_id=3D1795743&letter_id=3D=
+4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2Fcompanies%2F642034-biznes-sh=
+kola-itc-group%3Futm_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm_sou=
+rce%3Demail">=D0=91=D0=B8=D0=B7=D0=BD=D0=B5=D1=81-=D1=88=D0=BA=D0=BE=D0=BB=
+=D0=B0 ITC Group</a><span style=3D"font-size: 12px; font-family: Arial, H=
+elvetica, sans-serif; color: #858585; line-height: 14px;">=D0=9C=D0=BE=D1=
+=81=D0=BA=D0=B2=D0=B0</span>
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<a style=3D"font-size: 18px; font-family: Arial, Helvetica, sans-serif; l=
+ine-height: 20px; color: #2667c1; font-weight: 400; text-decoration: none=
+;" href=3D"https://www.e-xecutive.ru/stats/click?user_id=3D1795743&letter=
+_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2Fevents%2F105186-klient=
+oorientirovannyi-menedzher-vnutrennyaya-i-vneshnyaya-klientoorientirovann=
+ost%3Futm_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm_source%3Demail=
+">=D0=9A=D0=BB=D0=B8=D0=B5=D0=BD=D1=82=D0=BE=D0=BE=D1=80=D0=B8=D0=B5=D0=BD=
+=D1=82=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=BD=D1=8B=D0=B9 =D0=BC=D0=B5=
+=D0=BD=D0=B5=D0=B4=D0=B6=D0=B5=D1=80. =D0=92=D0=BD=D1=83=D1=82=D1=80=D0=B5=
+=D0=BD=D0=BD=D1=8F=D1=8F =D0=B8 =D0=B2=D0=BD=D0=B5=D1=88=D0=BD=D1=8F=D1=8F=
+ =D0=BA=D0=BB=D0=B8=D0=B5=D0=BD=D1=82=D0=BE=D0=BE=D1=80=D0=B8=D0=B5=D0=BD=
+=D1=82=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=BD=D0=BE=D1=81=D1=82=D1=8C<=
+/a>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;padding-top: 1=
+7px; padding-bottom: 17px; border-bottom: 1px solid #dddddd"><table borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"paddi=
+ng:0;margin:0;border:0 none;width:100%;">
+<tr>
+<td border=3D"0" width=3D"65" valign=3D"top" style=3D"padding:0;margin:0;=
+border:0 none;width: 65px;vertical-align: top;"><table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"padding:0;margin:0=
+;border:0 none;width:100%;">
+<tr>
+<td border=3D"0" height=3D"22" align=3D"center" bgcolor=3D"#1d5bb8" style=
+=3D"padding:0;margin:0;border:0 none;height: 22px;text-align: center; lin=
+e-height: 22px; font-size: 12px; font-weight: 500; color: #ffffff; backgr=
+ound-color: #1d5bb8; font-family: Arial, Helvetica, sans-serif;">=D0=BE=D0=
+=BA=D1=82=D1=8F=D0=B1=D1=80=D1=8F
+</td>
+</tr>
+<tr>
+<td border=3D"0" height=3D"42" align=3D"center" bgcolor=3D"#fafafa" style=
+=3D"padding:0;margin:0;border:0 none;height: 42px;text-align: center; lin=
+e-height: 42px; font-size: 22px; font-weight: normal; color: #000000; fon=
+t-family: Arial, Helvetica, sans-serif;">02
+</td>
+</tr>
+</table></td>
+<td border=3D"0" width=3D"20" style=3D"padding:0;margin:0;border:0 none;w=
+idth: 20px;min-width: 20px;">=C2=A0
+</td>
+<td border=3D"0" valign=3D"top" style=3D"padding:0;margin:0;border:0 none=
+;vertical-align: top;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%" style=3D"padding:0;margin:0;border:0 none;width:100%;"=
+>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;padding-top: 4=
+px; padding-bottom: 4px;">
+<span style=3D"font-size: 10px; font-family: Arial, Helvetica, sans-serif=
+; color: #858585; text-transform: uppercase; line-height: 14px; margin-ri=
+ght: 12px;">=D0=9E=D1=82=D0=BA=D1=80=D1=8B=D1=82=D1=8B=D0=B9</span><a sty=
+le=3D"font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-he=
+ight: 16px; color: #2667c1; text-decoration: none; margin-right: 12px;" h=
+ref=3D"https://www.e-xecutive.ru/stats/click?user_id=3D1795743&letter_id=3D=
+4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2Fcompanies%2F751367-russkaya-=
+shkola-upravleniya%3Futm_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm=
+_source%3Demail">=D0=A0=D1=83=D1=81=D1=81=D0=BA=D0=B0=D1=8F =D0=A8=D0=BA=D0=
+=BE=D0=BB=D0=B0 =D0=A3=D0=BF=D1=80=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D1=
+=8F</a><span style=3D"font-size: 12px; font-family: Arial, Helvetica, san=
+s-serif; color: #858585; line-height: 14px;">=D0=9C=D0=BE=D1=81=D0=BA=D0=B2=
+=D0=B0</span>
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<a style=3D"font-size: 18px; font-family: Arial, Helvetica, sans-serif; l=
+ine-height: 20px; color: #2667c1; font-weight: 400; text-decoration: none=
+;" href=3D"https://www.e-xecutive.ru/stats/click?user_id=3D1795743&letter=
+_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2Fevents%2F110711-finans=
+ovyi-direktor%3Futm_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm_sour=
+ce%3Demail">=D0=9A=D1=83=D1=80=D1=81 =C2=AB=D0=A4=D0=B8=D0=BD=D0=B0=D0=BD=
+=D1=81=D0=BE=D0=B2=D1=8B=D0=B9 =D0=B4=D0=B8=D1=80=D0=B5=D0=BA=D1=82=D0=BE=
+=D1=80=C2=BB</a>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;padding-top: 1=
+7px;">
+<a style=3D"font-size: 14px; line-height: 20px; font-weight: 400; font-fa=
+mily: Arial, Helvetica, sans-serif; color: #2667c1; text-decoration: none=
+; text-decoration: underline;" href=3D"https://www.e-xecutive.ru/stats/cl=
+ick?user_id=3D1795743&letter_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive=
+.ru%2Fevents%3Futm_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm_sourc=
+e%3Demail">=D0=94=D1=80=D1=83=D0=B3=D0=B8=D0=B5 =D1=81=D0=B5=D0=BC=D0=B8=D0=
+=BD=D0=B0=D1=80=D1=8B =D0=B8 =D1=82=D1=80=D0=B5=D0=BD=D0=B8=D0=BD=D0=B3=D0=
+=B8</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" st=
+yle=3D"padding:0;margin:0;border:0 none;width:100%;">
+<tr><td border=3D"0" height=3D"15" style=3D"padding:0;margin:0;border:0 n=
+one;height: 15px;"></td></tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" bgcolor=3D"#efefe=
+f" width=3D"100%" style=3D"padding:0;margin:0;border:0 none;background:#e=
+fefef;width:100%;"><tr><td border=3D"0" style=3D"padding:0;margin:0;borde=
+r:0 none;padding: 10px 0;" align=3D"center"><table border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" align=3D"center" style=3D"padding:0;margin:0;b=
+order:0 none;width:100%;margin: 0 auto; max-width: 620px" width=3D"100%">=
+<tr><td border=3D"0" style=3D"padding:0;margin:0;border:0 none;"><span st=
+yle=3D"font-weight: bold; font-size: 15px; font-family: Arial, Helvetica,=
+ sans-serif; line-height: 17px; color: #000000; text-transform: uppercase=
+;">=D0=9D=D0=BE=D0=B2=D0=BE=D1=81=D1=82=D0=B8</span></td></tr></table></t=
+d></tr></table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" st=
+yle=3D"padding:0;margin:0;border:0 none;width:100%;">
+<tr><td border=3D"0" height=3D"20" style=3D"padding:0;margin:0;border:0 n=
+one;height: 20px;"></td></tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" =
+style=3D"padding:0;margin:0;border:0 none;width:100%;margin: 0 auto; max-=
+width: 620px" width=3D"100%">
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<a style=3D"font-size: 18px; line-height: 20px; font-family: Arial, Helve=
+tica, sans-serif; font-weight: normal; color: #2667c1; text-decoration: n=
+one;" href=3D"https://www.e-xecutive.ru/stats/click?user_id=3D1795743&let=
+ter_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2Fsections%2Fhr-news%=
+2Fnews%2F2097295-nazvany-top-10-sfer-s-naibolshim-sprosom-na-sotrudnikov%=
+3Futm_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm_source%3Demail">=D0=
+=9D=D0=B0=D0=B7=D0=B2=D0=B0=D0=BD=D1=8B =D1=82=D0=BE=D0=BF-10 =D1=81=D1=84=
+=D0=B5=D1=80 =D1=81 =D0=BD=D0=B0=D0=B8=D0=B1=D0=BE=D0=BB=D1=8C=D1=88=D0=B8=
+=D0=BC =D1=81=D0=BF=D1=80=D0=BE=D1=81=D0=BE=D0=BC =D0=BD=D0=B0 =D1=81=D0=BE=
+=D1=82=D1=80=D1=83=D0=B4=D0=BD=D0=B8=D0=BA=D0=BE=D0=B2</a>
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<div style=3D"font-size: 14px; line-height: 17px; font-weight: normal; fo=
+nt-family: Arial, Helvetica, sans-serif; color: #262626; -webkit-text-siz=
+e-adjust: none;">
+<table style=3D"width: 100%; padding: 0; margin: 0;" cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"padding: 5px=
+ 0; margin: 0; border: 0 none; color: #000000; font-size: 14px; font-fami=
+ly: Arial, Helvetica, sans-serif; line-height: 20px;" border=3D"0">=D0=9E=
+=D0=B1=D1=89=D0=B8=D0=B9 =D0=BF=D1=80=D0=B8=D1=80=D0=BE=D1=81=D1=82 =D1=87=
+=D0=B8=D1=81=D0=BB=D0=B0 =D0=B2=D0=B0=D0=BA=D0=B0=D0=BD=D1=81=D0=B8=D0=B9=
+ =D0=B2 =D1=81=D0=B5=D0=BD=D1=82=D1=8F=D0=B1=D1=80=D0=B5 2023 =D0=B3=D0=BE=
+=D0=B4=D0=B0 =D0=BF=D0=BE =D1=81=D1=80=D0=B0=D0=B2=D0=BD=D0=B5=D0=BD=D0=B8=
+=D1=8E =D1=81 =D0=BF=D1=80=D0=BE=D1=88=D0=BB=D1=8B=D0=BC =D0=B3=D0=BE=D0=B4=
+=D0=BE=D0=BC =D1=81=D0=BE=D1=81=D1=82=D0=B0=D0=B2=D0=B8=D0=BB 2,4 =D1=80=D0=
+=B0=D0=B7=D0=B0.</td></tr></table>
+</div>
+</td>
+</tr>
+<tr><td border=3D"0" colspan=3D"2" height=3D"15" style=3D"padding:0;margi=
+n:0;border:0 none;height: 15px;"></td></tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<a style=3D"font-size: 18px; line-height: 20px; font-family: Arial, Helve=
+tica, sans-serif; font-weight: normal; color: #2667c1; text-decoration: n=
+one;" href=3D"https://www.e-xecutive.ru/stats/click?user_id=3D1795743&let=
+ter_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2Fsections%2Fhr-news%=
+2Fnews%2F2097296-gazprombank-mozhet-vykupit-torgovye-tsentry-mega-u-vlade=
+ltsa-ikea%3Futm_campaign%3D4380%26utm_medium%3Dmenedzhment%26utm_source%3=
+Demail">=C2=AB=D0=93=D0=B0=D0=B7=D0=BF=D1=80=D0=BE=D0=BC=D0=B1=D0=B0=D0=BD=
+=D0=BA=C2=BB =D0=BC=D0=BE=D0=B6=D0=B5=D1=82 =D0=B2=D1=8B=D0=BA=D1=83=D0=BF=
+=D0=B8=D1=82=D1=8C =D1=82=D0=BE=D1=80=D0=B3=D0=BE=D0=B2=D1=8B=D0=B5 =D1=86=
+=D0=B5=D0=BD=D1=82=D1=80=D1=8B =C2=AB=D0=9C=D0=B5=D0=B3=D0=B0=C2=BB =D1=83=
+ =D0=B2=D0=BB=D0=B0=D0=B4=D0=B5=D0=BB=D1=8C=D1=86=D0=B0 IKEA</a>
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<div style=3D"font-size: 14px; line-height: 17px; font-weight: normal; fo=
+nt-family: Arial, Helvetica, sans-serif; color: #262626; -webkit-text-siz=
+e-adjust: none;">
+<table style=3D"width: 100%; padding: 0; margin: 0;" cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"padding: 5px=
+ 0; margin: 0; border: 0 none; color: #000000; font-size: 14px; font-fami=
+ly: Arial, Helvetica, sans-serif; line-height: 20px;" border=3D"0">=D0=9E=
+=D0=B1=D1=89=D0=B0=D1=8F =D1=81=D1=82=D0=BE=D0=B8=D0=BC=D0=BE=D1=81=D1=82=
+=D1=8C =D0=B0=D0=BA=D1=82=D0=B8=D0=B2=D0=BE=D0=B2 =D0=BC=D0=BE=D0=B6=D0=B5=
+=D1=82 =D0=B4=D0=BE=D1=81=D1=82=D0=B8=D0=B3=D0=B0=D1=82=D1=8C $2,85 =D0=BC=
+=D0=BB=D1=80=D0=B4.</td></tr></table>
+</div>
+</td>
+</tr>
+<tr><td border=3D"0" colspan=3D"2" height=3D"15" style=3D"padding:0;margi=
+n:0;border:0 none;height: 15px;"></td></tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<a style=3D"font-size: 18px; line-height: 20px; font-family: Arial, Helve=
+tica, sans-serif; font-weight: normal; color: #2667c1; text-decoration: n=
+one;" href=3D"https://www.e-xecutive.ru/stats/click?user_id=3D1795743&let=
+ter_id=3D4380&url=3Dhttps%3A%2F%2Fwww.e-xecutive.ru%2Fcompanies%2F1998872=
+-fakultet-plehanovskaya-shkola-biznesa-integral%2Fnews%2F2097294-v-plehan=
+ovskoi-shkole-biznesa-integral-startovala-programma-mini-mba%3Futm_campai=
+gn%3D4380%26utm_medium%3Dmenedzhment%26utm_source%3Demail">=D0=92 =D0=9F=D0=
+=BB=D0=B5=D1=85=D0=B0=D0=BD=D0=BE=D0=B2=D1=81=D0=BA=D0=BE=D0=B9 =D1=88=D0=
+=BA=D0=BE=D0=BB=D0=B5 =D0=B1=D0=B8=D0=B7=D0=BD=D0=B5=D1=81=D0=B0 =C2=AB=D0=
+=98=D0=BD=D1=82=D0=B5=D0=B3=D1=80=D0=B0=D0=BB=C2=BB =D1=81=D1=82=D0=B0=D1=
+=80=D1=82=D0=BE=D0=B2=D0=B0=D0=BB=D0=B0 =D0=BF=D1=80=D0=BE=D0=B3=D1=80=D0=
+=B0=D0=BC=D0=BC=D0=B0 Mini-MBA</a>
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<div style=3D"font-size: 14px; line-height: 17px; font-weight: normal; fo=
+nt-family: Arial, Helvetica, sans-serif; color: #262626; -webkit-text-siz=
+e-adjust: none;">
+<table style=3D"width: 100%; padding: 0; margin: 0;" cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"padding: 5px=
+ 0; margin: 0; border: 0 none; color: #000000; font-size: 14px; font-fami=
+ly: Arial, Helvetica, sans-serif; line-height: 20px;" border=3D"0">=D0=9F=
+=D1=80=D0=BE=D0=B3=D1=80=D0=B0=D0=BC=D0=BC=D0=B0 =D0=B4=D0=BB=D1=8F =D1=82=
+=D0=BE=D0=BF-=D0=BC=D0=B5=D0=BD=D0=B5=D0=B4=D0=B6=D0=BC=D0=B5=D0=BD=D1=82=
+=D0=B0 =D0=BA=D0=BE=D0=BC=D0=BF=D0=B0=D0=BD=D0=B8=D0=B9 =D0=BF=D1=80=D0=BE=
+=D0=B4=D0=BB=D0=B8=D1=82=D1=81=D1=8F =D1=82=D1=80=D0=B8 =D0=BC=D0=B5=D1=81=
+=D1=8F=D1=86=D0=B0.</td></tr></table>
+</div>
+</td>
+</tr>
+<tr><td border=3D"0" colspan=3D"2" height=3D"15" style=3D"padding:0;margi=
+n:0;border:0 none;height: 15px;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" =
+width=3D"100%" style=3D"padding:0;margin:0;border:0 none;width:100%;">
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;"><table borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" style=3D"pad=
+ding:0;margin:0;border:0 none;width:100%;margin: 0 auto; max-width: 620px=
+;" width=3D"100%">
+<tr><td border=3D"0" height=3D"14" style=3D"padding:0;margin:0;border:0 n=
+one;height: 14px;"></td></tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;font: 14px/20p=
+x Arial, Helvetica, sans-serif; color: #262626;">
+</td>
+</tr>
+<tr>
+<td border=3D"0" height=3D"14" style=3D"padding:0;margin:0;border:0 none;=
+height: 14px;">
+<span style=3D"display: none;">=C2=A0</span>
+</td>
+</tr>
+</table></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td border=3D"0" bgcolor=3D"#efefef" style=3D"padding:0;margin:0;border:0=
+ none;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"620" ali=
+gn=3D"center" style=3D"padding:0;margin:0;border:0 none;width:620px;margi=
+n: 0 auto; max-width: 620px;">
+<tr><td border=3D"0" height=3D"15" style=3D"padding:0;margin:0;border:0 n=
+one;height: 15px;heigth: 15px; border-top: 1px solid #d2d2d2;"></td></tr>=
+
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;font: 11px/16p=
+x Arial, Helvetica, sans-serif; color: #000000;">=D0=92=D1=8B =D0=BF=D0=BE=
+=D0=BB=D1=83=D1=87=D0=B8=D0=BB=D0=B8 =D1=8D=D1=82=D0=BE =D0=BF=D0=B8=D1=81=
+=D1=8C=D0=BC=D0=BE, =D0=BF=D0=BE=D1=82=D0=BE=D0=BC=D1=83 =D1=87=D1=82=D0=BE=
+ =D0=BF=D0=BE=D0=B4=D0=BF=D0=B8=D1=81=D0=B0=D0=BB=D0=B8=D1=81=D1=8C =D0=BD=
+=D0=B0 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D1=83 Executive.ru
+=C2=AB=D0=9C=D0=B5=D0=BD=D0=B5=D0=B4=D0=B6=D0=BC=D0=B5=D0=BD=D1=82=C2=BB.=
+
+<br>
+=D0=A7=D1=82=D0=BE=D0=B1=D1=8B =D0=BE=D1=82=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=
+=D1=8C=D1=81=D1=8F =D0=BE=D1=82 =D0=BD=D0=B5=D0=B5 =D0=BD=D0=B0=D0=B6=D0=BC=
+=D0=B8=D1=82=D0=B5 =D0=BA=D0=BD=D0=BE=D0=BF=D0=BA=D1=83
+<a style=3D"font-size: 11px; line-height: 16px; font-family: Arial, Helve=
+tica, sans-serif; text-decoration: underline; color: #2667c1;" href=3D"ht=
+tps://www.e-xecutive.ru/unsubscribes/U1Mxa25BYVJpS01DM0lYQWtsWnMvaU92aFQw=
+SFdldnJ6L2g3bExuU0QxRnlOT0sxMWdwOTRsdXNWRWNuVEl2My0tR1JHSVNlNDg4VTdJem9ZU=
+TVxRlpoZz09--ef6fe2f1aec478c8cb28ad588ec82c5783bff3a5/unsubscribe?list_id=
+=3D6">=C2=AB=D0=9E=D1=82=D0=BF=D0=B8=D1=81=D0=B0=D1=82=D1=8C=D1=81=D1=8F=C2=
+=BB</a>
+<br>
+=D0=A7=D1=82=D0=BE=D0=B1=D1=8B =D0=BF=D0=BE=D0=B4=D0=BF=D0=B8=D1=81=D0=B0=
+=D1=82=D1=8C=D1=81=D1=8F =D0=BD=D0=B0 =D0=B4=D1=80=D1=83=D0=B3=D0=B8=D0=B5=
+ =D0=B8=D0=BD=D1=82=D0=B5=D1=80=D0=B5=D1=81=D1=83=D1=8E=D1=89=D0=B8=D0=B5=
+ =D0=B2=D0=B0=D1=81 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B8, =D0=
+=BD=D0=B0=D0=B6=D0=BC=D0=B8=D1=82=D0=B5 =D0=BA=D0=BD=D0=BE=D0=BF=D0=BA=D1=
+=83
+<a style=3D"font-size: 11px; line-height: 16px; font-family: Arial, Helve=
+tica, sans-serif; text-decoration: underline; color: #2667c1;" href=3D"ht=
+tps://www.e-xecutive.ru/unsubscribes/U1Mxa25BYVJpS01DM0lYQWtsWnMvaU92aFQw=
+SFdldnJ6L2g3bExuU0QxRnlOT0sxMWdwOTRsdXNWRWNuVEl2My0tR1JHSVNlNDg4VTdJem9ZU=
+TVxRlpoZz09--ef6fe2f1aec478c8cb28ad588ec82c5783bff3a5">=C2=AB=D0=A3=D0=BF=
+=D1=80=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5 =D1=80=D0=B0=D1=81=D1=81=
+=D1=8B=D0=BB=D0=BA=D0=B0=D0=BC=D0=B8=C2=BB</a>
+</td>
+</tr>
+<tr><td border=3D"0" height=3D"20" style=3D"padding:0;margin:0;border:0 n=
+one;height: 20px;"></td></tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<span style=3D"font: 11px/16px Arial, Helvetica, sans-serif; color: #0000=
+00;">
+=D0=A1=D0=B5=D1=80=D0=B2=D0=B8=D1=81=D1=8B, =D1=80=D0=B5=D0=BA=D1=80=D1=83=
+=D1=82=D0=B8=D0=BD=D0=B3:
+<a style=3D"font: 11px/16px Arial, Helvetica, sans-serif; color: #2667c1;=
+ text-decoration: none;" href=3D"mailto:search@e-xecutive.ru">search@e-xe=
+cutive.ru</a>
+<br>
+=D0=A1=D0=B5=D1=80=D0=B2=D0=B8=D1=81=D1=8B, =D0=BE=D0=B1=D1=80=D0=B0=D0=B7=
+=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5:
+<a style=3D"font: 11px/16px Arial, Helvetica, sans-serif; color: #2667c1;=
+ text-decoration: none;" href=3D"mailto:trainings@e-xecutive.ru">training=
+s@e-xecutive.ru</a>
+<br>
+=D0=A0=D0=B5=D0=BA=D0=BB=D0=B0=D0=BC=D0=B0:
+<a style=3D"font: 11px/16px Arial, Helvetica, sans-serif; color: #2667c1;=
+ text-decoration: none;" href=3D"mailto:advertising@e-xecutive.ru">advert=
+ising@e-xecutive.ru</a>
+<br>
+=D0=A0=D0=B5=D0=B4=D0=B0=D0=BA=D1=86=D0=B8=D1=8F:
+<a style=3D"font: 11px/16px Arial, Helvetica, sans-serif; color: #2667c1;=
+ text-decoration: none;" href=3D"mailto:content@e-xecutive.ru">content@e-=
+xecutive.ru</a>
+<br>
+=D0=9F=D0=BE=D0=B4=D0=B4=D0=B5=D1=80=D0=B6=D0=BA=D0=B0:
+<a style=3D"font: 11px/16px Arial, Helvetica, sans-serif; color: #2667c1;=
+ text-decoration: none;" href=3D"mailto:support@e-xecutive.ru">support@e-=
+xecutive.ru</a>
+</span>
+</td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"620" ali=
+gn=3D"center" style=3D"padding:0;margin:0;border:0 none;width:620px;margi=
+n: 0 auto; max-width: 620px;">
+<tr>
+<td border=3D"0" height=3D"15" style=3D"padding:0;margin:0;border:0 none;=
+height: 15px;">=C2=A0
+</td>
+</tr>
+<tr>
+<td border=3D"0" style=3D"padding:0;margin:0;border:0 none;">
+<span style=3D"font-size: 11px; line-height: 16px; font-family: Arial, He=
+lvetica, sans-serif; color: #000000;">
+=D0=A1=D0=B2=D0=B8=D0=B4=D0=B5=D1=82=D0=B5=D0=BB=D1=8C=D1=81=D1=82=D0=B2=D0=
+=BE =D0=BE =D1=80=D0=B5=D0=B3=D0=B8=D1=81=D1=82=D1=80=D0=B0=D1=86=D0=B8=D0=
+=B8 =D0=A1=D0=9C=D0=98 =D0=AD=D0=BB N=D0=A4=D0=A1 77-38751. =D0=A0=D0=B5=D0=
+=BF=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D1=8F =D0=BC=D0=B0=D1=
+=82=D0=B5=D1=80=D0=B8=D0=B0=D0=BB=D0=BE=D0=B2 - =D1=82=D0=BE=D0=BB=D1=8C=D0=
+=BA=D0=BE =D1=81=D0=BE =D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=BE=D0=B9 =D0=BD=D0=
+=B0 Executive.ru, =D1=81 =D1=80=D0=B0=D0=B7=D1=80=D0=B5=D1=88=D0=B5=D0=BD=
+=D0=B8=D1=8F =D1=80=D0=B5=D0=B4=D0=B0=D0=BA=D1=86=D0=B8=D0=B8 =D1=81=D0=B0=
+=D0=B9=D1=82=D0=B0. =D0=A0=D0=B5=D0=B4=D0=B0=D0=BA=D1=86=D0=B8=D1=8F =D0=BD=
+=D0=B5 =D0=BD=D0=B5=D1=81=D0=B5=D1=82 =D0=BE=D1=82=D0=B2=D0=B5=D1=82=D1=81=
+=D1=82=D0=B2=D0=B5=D0=BD=D0=BD=D0=BE=D1=81=D1=82=D0=B8 =D0=B7=D0=B0 =D0=B2=
+=D1=8B=D1=81=D0=BA=D0=B0=D0=B7=D1=8B=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F =D0=BF=
+=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=B5=D0=B9 =
+=D0=BD=D0=B0 =D1=81=D0=B0=D0=B9=D1=82=D0=B5.
+</span>
+</td>
+</tr>
+<tr>
+<td border=3D"0" height=3D"15" style=3D"padding:0;margin:0;border:0 none;=
+height: 15px;">=C2=A0
+</td>
+</tr>
+
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"620" ali=
+gn=3D"center" style=3D"padding:0;margin:0;border:0 none;width:620px;margi=
+n: 0 auto; max-width: 620px;">
+<tr>
+<td border=3D"0" valign=3D"bottom" width=3D"100%" style=3D"padding:0;marg=
+in:0;border:0 none;width: 100%;vertical-align: bottom;">
+<span style=3D"font: 11px/16px Arial, Helvetica, sans-serif; color: #0000=
+00">(=D1=81) Executive.ru</span>
+</td>
+<td border=3D"0" width=3D"20" style=3D"padding:0;margin:0;border:0 none;w=
+idth: 20px;padding-left: 10px;">
+<a href=3D"https://www.e-xecutive.ru/stats/click?user_id=3D1795743&letter=
+_id=3D4380&url=3Dhttps%3A%2F%2Ft.me%2FExecutiveMedia" style=3D"text-decor=
+ation: none;" target=3D"_blank"><img valign=3D"bottom" border=3D"0" style=
+=3D"display: block" src=3D"https://www.e-xecutive.ru/assets/mail/social/t=
+elegram-10242950a80856c7c5b3ed8244be0a1e7b478bab40a86be2e9c3e775f8da84ac.=
+png" alt=3D"Telegram" width=3D"24" height=3D"24"></a>
+</td>
+<td border=3D"0" width=3D"20" style=3D"padding:0;margin:0;border:0 none;w=
+idth: 20px;padding-left: 10px;">
+<a href=3D"https://www.e-xecutive.ru/stats/click?user_id=3D1795743&letter=
+_id=3D4380&url=3Dhttps%3A%2F%2Ftwitter.com%2Fexecutive_ru" style=3D"text-=
+decoration: none;" target=3D"_blank"><img valign=3D"bottom" border=3D"0" =
+style=3D"display: block" src=3D"https://www.e-xecutive.ru/assets/mail/soc=
+ial/twitter-0f764750af7b71666777c6bab349c8de603b17dda5630dbfe72b19b8c8ba9=
+0e5.png" alt=3D"Twitter" width=3D"24" height=3D"24"></a>
+</td>
+<td border=3D"0" width=3D"20" style=3D"padding:0;margin:0;border:0 none;w=
+idth: 20px;padding-left: 10px;">
+<a href=3D"https://www.e-xecutive.ru/stats/click?user_id=3D1795743&letter=
+_id=3D4380&url=3Dhttps%3A%2F%2Fvk.com%2Fexecutive" style=3D"text-decorati=
+on: none;" target=3D"_blank"><img valign=3D"bottom" border=3D"0" style=3D=
+"display: block" src=3D"https://www.e-xecutive.ru/assets/mail/social/vkon=
+takte-d94c3fe46ffb7d8f25d10cb97b52598328569a12e7488393639043e8ca6e74b6.pn=
+g" alt=3D"Vkontakte" width=3D"24" height=3D"24"></a>
+</td>
+<td border=3D"0" width=3D"20" style=3D"padding:0;margin:0;border:0 none;w=
+idth: 20px;padding-left: 10px;">
+<a href=3D"https://www.e-xecutive.ru/stats/click?user_id=3D1795743&letter=
+_id=3D4380&url=3Dhttps%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fe-xecutive" s=
+tyle=3D"text-decoration: none;" target=3D"_blank"><img valign=3D"bottom" =
+border=3D"0" style=3D"display: block" src=3D"https://www.e-xecutive.ru/as=
+sets/mail/social/linkedin-d80e9a9ff2085061efd4efc4c1a511c35034373a1995369=
+fe38e38e28882e70e.png" alt=3D"Linkedin" width=3D"24" height=3D"24"></a>
+</td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" st=
+yle=3D"padding:0;margin:0;border:0 none;width:100%;">
+<tr><td border=3D"0" height=3D"15" style=3D"padding:0;margin:0;border:0 n=
+one;height: 15px;"></td></tr>
+</table>
+</td>
+</tr>
+<tr><td border=3D"0" height=3D"50" style=3D"padding:0;margin:0;border:0 n=
+one;height: 50px;"></td></tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+<img src=3D"http://www.e-xecutive.ru/stats/open.gif?letter_id=3D4380&amp;=
+user_id=3D1795743" width=3D"1" height=3D"1" />

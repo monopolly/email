@@ -1,0 +1,49 @@
+Received: by mail-wr1-f53.google.com with SMTP id ffacd0b85a97d-3158a5e64b6so5840734f8f.0
+        for <james55@senthy.com>; Tue, 18 Jul 2023 13:17:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20221208; t=1689711479; x=1692303479;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=FL5aAAYtQS1v2fxmKyGsIr6RXI50f3uMa92JnVIeuaI=;
+        b=duCeHv2P4C62lFpvk3YHwHOzRDJvRymTFzfNErlxhRcKWifd3SCbYq8+lpHCUzR6WQ
+         zS+Fx3786hfpvg5o6v7pSh027uw8sGfE5D78RNXWR9v0O/K+U+H7Ek0l9x9jET3Hi9yr
+         teVBvLlc3wMiobe8VE421GuXSQAFfpEIi5KQlk+OtBjZRocz1lOs6+0TcxoDFJHoM4I9
+         o25A2RMWpYn+DqmP3MbXXSx/I4GBhO7FFsBSzb+3gC2/4CezA2y9btVAylgTgxq8Cmyl
+         Kzj7746X0BgjirH/tfP3rlb9M7N3zDWFymlGAHzsWw5GUgyzFG7O2IixS4bKCfX3PylJ
+         kJUA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1689711479; x=1692303479;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=FL5aAAYtQS1v2fxmKyGsIr6RXI50f3uMa92JnVIeuaI=;
+        b=Hi8vhpGjB5nTpmCBLr6OqO72RH05NmLrlx9PCVX4p3AY82fcjmcj6cRJB13UaFiSGu
+         1h8hC8rEVimHteYQracmBHwp+K1H75SmSXIbO0Lezv6nxRtZ4lzKj2416eTX9f8vG0E7
+         Tf/t3LtzfIAvF5CvDpW6D5wqhuChKvt/RNO/zvhRU7xhGA86KNDbEvDnluRuiE/VKrwU
+         zJv1Vzvqq0UpMOY98kuUeBwN9XNh9F+JMiD7NvJCb4ffG4mkQJLRvddc2EgKa7/ATF26
+         C3/rO2rkZUV9x1L1LWiqYm/fnLBFGBEMMGt1fdMOhinsJUqwzoiQac4OPDSnh8PD4Gfp
+         oNLQ==
+X-Gm-Message-State: ABy/qLYDKTaNpKr61cdsFziir3QirMJG1H3x3ZF3C4setylWTComn/sN
+	B0JaBcWf5eDgF/RKDN/Ueqsyrpk47JWMSZTp05il64aWuNc=
+X-Google-Smtp-Source: APBJJlFhHiGhkjn00qlgi6w89qORyolTsPwJGiFP1BIDhYLHmTPQYq4Ja4oe2S3pniJTPvvamEr9a81ONVnm3qJQvv4=
+X-Received: by 2002:adf:e6c4:0:b0:314:11ea:480d with SMTP id
+ y4-20020adfe6c4000000b0031411ea480dmr13113195wrm.9.1689711478804; Tue, 18 Jul
+ 2023 13:17:58 -0700 (PDT)
+MIME-Version: 1.0
+From: =?UTF-8?B?0JTQsNGI0LAg0JrRg9GI0L3QtdGA0LXQvdC60L4=?= <dasakusnerenko04@gmail.com>
+Date: Tue, 18 Jul 2023 23:16:21 +0300
+Message-ID: <CAAZ6UQFAMTqPzMoJ3kcgDMDT6Epy7d9Cdr_+Lqm3=MYdJFTXMw@mail.gmail.com>
+Subject: 
+To: james55@senthy.com
+Content-Type: multipart/alternative; boundary="0000000000007796f10600c89cb8"
+
+--0000000000007796f10600c89cb8
+Content-Type: text/plain; charset="UTF-8"
+
+
+
+--0000000000007796f10600c89cb8
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="auto"></div>
+
+--0000000000007796f10600c89cb8--

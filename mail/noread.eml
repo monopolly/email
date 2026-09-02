@@ -1,0 +1,116 @@
+Delivered-To: lava.mobi@gmail.com
+Received: by 2002:a05:7110:b50b:b0:227:8b33:35b1 with SMTP id hp11csp192201geb;
+        Mon, 8 Jan 2024 23:39:27 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGCAxTCToBOlIg1WIDn2IBM8W924Q/2tXkaKmNwVsK7BU5TMILDeixbKTUGPsgeQE6oGzpv
+X-Received: by 2002:adf:fa4c:0:b0:337:3ed6:8697 with SMTP id y12-20020adffa4c000000b003373ed68697mr314768wrr.90.1704785967709;
+        Mon, 08 Jan 2024 23:39:27 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1704785967; cv=none;
+        d=google.com; s=arc-20160816;
+        b=dw4EpfO5zwLc3xhvLL9uHSAlF5WE5+HB8qYc0TVWT443Oy3nCwN4bIwUU2DLXpJV7D
+         1nI2I/6R5ljGnBrbnEi3V2GEtzD+E+yD3cUzw9foFPauUT5yCxramooVXwalfMwXn8e2
+         Wl+O0o6JREEY8XlAgARKo18IlInHmy9q0Afuh2VVoGXBYJDoyTx+K0/GRxps9WAIZwV/
+         noi6dv1EzGLojkTx28rr3Bt0V4gXvy1467fK5lT5wEm3SAjtU4sybnmc6kyMkxIx5ovi
+         cPIMdTAP+SiSjjx5QxpdmFnw8OYPcvtOR7NF0qqN7UxJt27XDVa63J4+P8AxinIkMJz7
+         WDFw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:reply-to:from:subject:to:dkim-signature:dkim-filter;
+        bh=MXfzT9iwRN3OVtmjcIZU0eQLIgYJo9NjPF9W7m1oFyo=;
+        fh=XN64Yg2zuSH8QgSFiWP95UslvFvuO3d8jprX0dvpPuM=;
+        b=VuG5gjecKoboPYyZdcUeEAg+rds3/h0F8S251a/adA0jdyRw1JPoQOW9Om/S4aM20k
+         hApBNjVjqDQnGiZxQLCfi0Nxcl+f9FXlcz2P1w0O16EyV5Z6PaIpgROmcue2w4J11Mze
+         cDFs0LxyLyucblEi/T09jqoZtMYWXGun6132YC3KP+vwpnI8btyNbWNd9+gtps6zHUXf
+         RdCeeU7b5ZXtGVsxWxh3FDxIOWW3T0Pk9JDffwVqsG972zpJhCJNe6PX9zGVu1MrXtD2
+         wfYTGZixewxQFQojks07JqNpqqw3rs9C/Q13uOf9C17aG2Yy05n4cmiY/aIBhV8NmuUo
+         aMpA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@fkwallet.ru header.s=E7E7973C-4D84-11ED-8DF2-2479F97AF59A header.b=PBpZdGz8;
+       spf=pass (google.com: domain of noreply@fkwallet.ru designates 88.99.65.151 as permitted sender) smtp.mailfrom=noreply@fkwallet.ru;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=fkwallet.ru
+Return-Path: <noreply@fkwallet.ru>
+Received: from mail.freekassa.ru (mail.freekassa.ru. [88.99.65.151])
+        by mx.google.com with ESMTPS id a9-20020adff7c9000000b00336595d1d42si632866wrq.16.2024.01.08.23.39.27
+        for <lava.mobi@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 08 Jan 2024 23:39:27 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@fkwallet.ru designates 88.99.65.151 as permitted sender) client-ip=88.99.65.151;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@fkwallet.ru header.s=E7E7973C-4D84-11ED-8DF2-2479F97AF59A header.b=PBpZdGz8;
+       spf=pass (google.com: domain of noreply@fkwallet.ru designates 88.99.65.151 as permitted sender) smtp.mailfrom=noreply@fkwallet.ru;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=fkwallet.ru
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by mail.freekassa.ru (Postfix) with ESMTP id 6DDC912E1ECC
+	for <lava.mobi@gmail.com>; Tue,  9 Jan 2024 08:39:27 +0100 (CET)
+X-Amavis-Alert: BAD HEADER SECTION, Non-encoded non-ASCII data (and not UTF-8)
+	(char C0 hex): Subject:
+	\x{C0}\x{EA}\x{F2}\x{E8}\x{E2}\x{E0}\x{F6}\x{E8}\x{FF}
+	\x{E0}\x{EA}\x{EA}\x{E0}\x{F3}\x{ED}\x{F2}\x{E0}
+Received: from mail.freekassa.ru ([127.0.0.1])
+	by localhost (mail.freekassa.ru [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id 0ymG078mdgd4 for <lava.mobi@gmail.com>;
+	Tue,  9 Jan 2024 08:39:27 +0100 (CET)
+X-Virus-Scanned: amavisd-new at mail.freekassa.ru
+DKIM-Filter: OpenDKIM Filter v2.10.3 mail.freekassa.ru 4456E12E1EA8
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=fkwallet.ru;
+	s=E7E7973C-4D84-11ED-8DF2-2479F97AF59A; t=1704785967;
+	bh=MXfzT9iwRN3OVtmjcIZU0eQLIgYJo9NjPF9W7m1oFyo=;
+	h=To:From:Message-Id:Date;
+	b=PBpZdGz8c5zE5JzTKinGtHFfyHmijCyUInPOaWCV+V7VSvHB1kzPLUTeqhgtnubNe
+	 oIRWsN3AlBt6IkS3I+y+zANp5OPQ+xivsrNKO4hD0q05Iz11U1zg8X+qY4X1uze8fb
+	 0w5PLR3MVzo6sCFrIQ834VuPcAFgDIhT+FWNNiGTnF8hUHMstLx43HnApHDjPoEcy6
+	 UULUQpsSMHeo7ncHyi2oj3JZRrTprivhr++4QYBUDavv/0GS/WRbAxriNm/ZVmFgnx
+	 0iD7Jk+6Yf7HE7zTYzhrZRfuctxm1JS5yrhF5yoCz5BDok+kt1jeWXDAYat1voJCc9
+	 xKkMS0XR0VsBQ==
+X-Amavis-Alert: BAD HEADER SECTION, Non-encoded non-ASCII data (and not UTF-8)
+	(char C0 hex): Subject:
+	\x{C0}\x{EA}\x{F2}\x{E8}\x{E2}\x{E0}\x{F6}\x{E8}\x{FF}
+	\x{E0}\x{EA}\x{EA}\x{E0}\x{F3}\x{ED}\x{F2}\x{E0}
+X-Virus-Scanned: amavisd-new at web303.ifksc.ru
+X-Amavis-Alert: BAD HEADER SECTION, Non-encoded 8-bit data (char C0 hex):
+	Subject: \300\352\362\350\342\340\366\350\377
+	\340\352\352\340\363\355\362\340
+To: lava.mobi@gmail.com
+Subject: Активация аккаунта
+X-PHP-Originating-Script: 5016:site.class.php
+From: noreply@fkwallet.ru
+Reply-to: noreply@fkwallet.ru
+Content-type: text/html; charset="windows-1251"
+Message-Id: <20240109073925.7B29862C0863@web303.ifksc.ru>
+Date: Tue,  9 Jan 2024 10:39:25 +0300 (MSK)
+
+<div style="width: 684px;border: 3px double #D8D8D8; padding: 0 15px 20px 15px;">
+    <div>
+        <img src="http://www.free-kassa.ru/img/maillogo.png" style="width: 245px;float: left;position: relative;top: -2px;height: 67px;">
+        <div style="float: right;line-height: 40px;font-family: Verdana; font-size: 10px; color: #333333;padding-right: 5px;"></div>
+        <div style="clear:both;"></div>
+    </div>
+    <div style="border-bottom: 4px solid #CF0248;"></div>
+
+    <div style="border-bottom: 1px solid #D8D8D8;font-size: 12px;line-height: 20px;padding: 5px 5px 10px 5px;margin: 0 0 10px 0;max-width: 705px;font-family: monospace;">
+        <div style="color: #333333;font-size: 24px;margin-bottom: 5px;margin-top: 40px;font-family: arial;padding: 0 5px;">Активация аккаунта</div>
+    </div>
+    <div style="padding: 10px 10px 20px 10px;">
+        <div style="font-weight: bold;">Здравствуйте,</div><br>
+        <div> Для активации аккаунта перейдите по ссылке - <a href="https://fkwallet.com/activation/?em=lava.mobi@gmail.com&code=62631">https://fkwallet.com/activation/?em=lava.mobi@gmail.com&code=62631</a>
+            </div>
+    </div>
+    <div style="border-bottom: 1px solid #D8D8D8;"></div>
+
+
+
+    <div style="padding: 20px 10px;">
+        <a href="http://www.monitorwm.ru"><strong><img alt="" align="left" src="http://www.free-kassa.ru/img/monitorwmlogo.png" width="200"/></a><br>
+        <span style="color:#FF0000;"><a href="http://www.monitorwm.ru"><strong>Мониторинг обменных пунктов MonitorWM.ru</a><br>Мониторинг обменников поможет вам быстро обменивать деньги в Интернете с наименьшими затратами на комиссиях обменников.</span>
+    </div>
+    <div style="border-bottom: 1px solid #CF0248;"></div>
+
+    <div style="padding: 25px 10px 10px 20px;float:right;">
+        С уважением,<br>
+        команда Free-Kassa<br>
+        <a href="http://www.free-kassa.ru">http://www.free-kassa.ru</a>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+<div style="width: 670px;font-size: 13px;padding: 5px 25px;text-align: center;">
+    Это автоматическое e-mail сообщение – просим вас не отвечать.
+    В случае возникновения вопросов обращайтесь в <a href="http://www.free-kassa.ru/support.php">Службу Поддержки</a>, и наши специалисты ответят на все ваши вопросы.
+</div>

@@ -1,0 +1,38 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220401T070000Z
+DTEND:20220401T080000Z
+DTSTAMP:20220331T201648Z
+ORGANIZER;CN=dm@embacy.io:mailto:dm@embacy.io
+UID:2frqg22haaaeu7ac5v68a0aq4q@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=ebardasheva@gmail.com;X-NUM-GUESTS=0:mailto:ebardasheva@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=dm@embacy.io;X-NUM-GUESTS=0:mailto:dm@embacy.io
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=a@senthy.com;X-NUM-GUESTS=0:mailto:a@senthy.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/fbq-rfdf-ayc
+X-MICROSOFT-CDO-OWNERAPPTID:409852441
+CREATED:20220331T201647Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nНе редактируйте этот раздел описания.\n\nЭто меро
+ приятие проводится в формате видеовстречи.\nВидеовызов: https://meet.google
+ .com/fbq-rfdf-ayc\n(RU) +7 499 951-64-31 PIN-код: 3236703327254#\nПоказать 
+ другие номера телефонов: https://tel.meet/fbq-rfdf-ayc?pin=3236703327254&hs
+ =7\n\nПросмотрите свое мероприятие на странице https://calendar.google.com/
+ calendar/event?action=VIEW&eid=MmZycWcyMmhhYWFldTdhYzV2NjhhMGFxNHEgYUBzZW50
+ aHkuY29t&tok=MTIjZG1AZW1iYWN5LmlvN2RlMTEyNmRiYWZhZTk3MmUxZjkwM2RiNDYzMzgxOG
+ QwYjU0YWQ2Zg&ctz=Europe%2FMoscow&hl=ru&es=1.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220331T201647Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:[LaborX] Internal review. Gigs
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

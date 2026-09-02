@@ -1,0 +1,35 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:CANCEL
+BEGIN:VEVENT
+DTSTART:20220401T060000Z
+DTEND:20220401T070000Z
+DTSTAMP:20220331T201607Z
+ORGANIZER;CN=dm@embacy.io:mailto:dm@embacy.io
+UID:32vn465h8b870n60kicpmo65o4@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=a@
+ senthy.com;X-NUM-GUESTS=0:mailto:a@senthy.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=dm@emb
+ acy.io;X-NUM-GUESTS=0:mailto:dm@embacy.io
+X-GOOGLE-CONFERENCE:https://meet.google.com/cyy-nntd-zbe
+CREATED:20220328T084659Z
+DESCRIPTION:[LaborX] Чек UI гиги и jobs\nПятница\, 1 апреля · 9:00–10:00AM\
+ nКонтактная информация для встречи в Google Meet\nСсылка: https://meet.goog
+ le.com/kbb-ctrn-zdu\nНомер телефона: PIN-код для номера ‪(RU) +7 499 951-64
+ -31‬: ‪236 826 355 7636‬#\nДополнительные номера: https://tel.meet/kbb-ctrn
+ -zdu?pin=2368263557636\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nDo not edit this section of the des
+ cription.\n\nThis event has a video call.\nJoin: https://meet.google.com/cy
+ y-nntd-zbe\n(RU) +7 499 951-64-31 PIN: 7961222004933#\nView more phone numb
+ ers: https://tel.meet/cyy-nntd-zbe?pin=7961222004933&hs=7\n-::~:~::~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220331T201606Z
+LOCATION:
+SEQUENCE:1
+STATUS:CANCELLED
+SUMMARY:(внешняя) LaborX gigs & jobs @UI
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

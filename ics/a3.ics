@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220323T060000Z
+DTEND:20220323T070000Z
+DTSTAMP:20220321T081751Z
+ORGANIZER;CN=dm@embacy.io:mailto:dm@embacy.io
+UID:6f5h4tdji3sb6nq2j7lvi078js@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=a@senthy.com;X-NUM-GUESTS=0:mailto:a@senthy.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=dm@embacy.io;X-NUM-GUESTS=0:mailto:dm@embacy.io
+X-MICROSOFT-CDO-OWNERAPPTID:-5980992
+CREATED:20220321T081750Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nНе редактируйте этот раздел описания.\n\nПросмотр
+ ите свое мероприятие на странице https://calendar.google.com/calendar/event
+ ?action=VIEW&eid=NmY1aDR0ZGppM3NiNm5xMmo3bHZpMDc4anMgYUBzZW50aHkuY29t&tok=M
+ TIjZG1AZW1iYWN5LmlvMGU2ZTUzYjg2YjY3OWE2NjlkMzcyOTgzODNjMmM3ZTg5OWJlMDhkOQ&c
+ tz=Europe%2FMoscow&hl=ru&es=1.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220321T081750Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LaborX Gigs review с клиентом
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

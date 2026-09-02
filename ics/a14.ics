@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Asia/Tbilisi
+X-LIC-LOCATION:Asia/Tbilisi
+BEGIN:STANDARD
+TZOFFSETFROM:+0400
+TZOFFSETTO:+0400
+TZNAME:+04
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Tbilisi:20230807T140000
+DTEND;TZID=Asia/Tbilisi:20230807T143000
+DTSTAMP:20230805T113118Z
+ORGANIZER;CN=gregdemin@gmail.com:mailto:gregdemin@gmail.com
+UID:tddiipkkr9lpbq0d699b6dngms@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=gregdemin@gmail.com;X-NUM-GUESTS=0:mailto:gregdemin@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=a@senthy.com;X-NUM-GUESTS=0:mailto:a@senthy.com
+X-MICROSOFT-CDO-OWNERAPPTID:520129142
+CREATED:20230805T113117Z
+DESCRIPTION:Event Name: 30 Minute Meeting\n\nPlease share anything that wil
+ l help prepare for our meeting.: насчет health тем)\n\nNeed to make changes
+  to this event?\nCancel: https://calendly.com/cancellations/4c9bcb74-b155-4
+ 837-afda-6f400cecda71\nReschedule: https://calendly.com/reschedulings/4c9bc
+ b74-b155-4837-afda-6f400cecda71\n\nPowered by Calendly.com\n
+LAST-MODIFIED:20230805T113117Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Martin "Roy" and Grigory Demin
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

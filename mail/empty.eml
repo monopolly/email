@@ -1,0 +1,75 @@
+Delivered-To: wire.common@gmail.com
+Received: by 2002:a8a:128c:0:b0:4f6:606c:5cb9 with SMTP id p12csp167012ocs;
+        Fri, 15 Sep 2023 01:57:31 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGKpp8av2gWcrA0kDbyfc1+lCpuSTVhcBo/+ehnzEXM6ZSBcW2w1L+lBN5764w10nNYcvXk
+X-Received: by 2002:a05:6a21:33a4:b0:158:f65:12d5 with SMTP id yy36-20020a056a2133a400b001580f6512d5mr1277333pzb.43.1694768251138;
+        Fri, 15 Sep 2023 01:57:31 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1694768251; cv=none;
+        d=google.com; s=arc-20160816;
+        b=HtGcC3DWrxt2pawTe8gtntnG7ZB3kMysERNHUG20OU0Scam8KJWIM1xkmiIMGW0KTd
+         vKSwtnwiaFQ05YDYVnrfGh4eiHOBWgAWY6IAsGyhA7n+y+3hrTVCyjfo9PSBkiMlAC1v
+         TaJ1bnOHI3LwJP0RVuuhatolpz68coFPFkFdBLWZ5v3uUwY63oUkflBEmmi+sfvstuC3
+         thbBOQIiuUrfhw3fO81qBrjpkpUcw3cnYIUoCWXerDciQ783nQSlbvUYcWYSIPRqzOfa
+         Fo5sP3KPEx7b2/06PqNuTHTcEwus1eJA3mhOU89bDw+T851SFT5RHKT84WMmSgt64Ome
+         ae8A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:message-id:subject:date:mime-version:from
+         :content-transfer-encoding:dkim-signature;
+        bh=C7H8N2ZP6sqK1wTQ4FxKYM6yc/4/N6Ll0LJThs4Oi7o=;
+        fh=oHWh3HcY0zHIsYOBmZgX+STJ7crkxUwxt6AXVfejbxU=;
+        b=RrEHvZ4kqSE2+sui8slZHLCwJwKCIttsx2lJaM7uYFz5AQZbeMXaaf/Q/iWzdaJaMV
+         YluO6xNESodwn1tFPkXjoV/OPgt3OBPhgGgU8f42vzdyh6+qBUKvLwDYg3/tNeSdxhU5
+         V5MQoeonm63oRTQm4s2tOn9KuS8tmPmrzHKk0mjbmmzzEJ3X4bFjLMKNePcfFF4i/H4h
+         hMpHTyty2DnH7nYNeMn75NIujOiNpZZhPQSBZyniYXAAVJ1b6fgUihgldZTk4CGLv58F
+         xg8BcAHw2TULt9rGBERXmXHSG9Tiq0Bor43mB2sGFTx7By+77VKT0hc6zqvtokx4TrYX
+         OSyg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@icloud.com header.s=1a1hai header.b=n+uTnTLR;
+       spf=pass (google.com: domain of foxskum@icloud.com designates 17.57.156.22 as permitted sender) smtp.mailfrom=foxskum@icloud.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=icloud.com
+Return-Path: <foxskum@icloud.com>
+Received: from ci74p00im-qukt09090501.me.com (ci74p00im-qukt09090501.me.com. [17.57.156.22])
+        by mx.google.com with ESMTPS id g14-20020aa7874e000000b0068e37bb8b68si2895424pfo.264.2023.09.15.01.57.30
+        for <wire.common@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 15 Sep 2023 01:57:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of foxskum@icloud.com designates 17.57.156.22 as permitted sender) client-ip=17.57.156.22;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@icloud.com header.s=1a1hai header.b=n+uTnTLR;
+       spf=pass (google.com: domain of foxskum@icloud.com designates 17.57.156.22 as permitted sender) smtp.mailfrom=foxskum@icloud.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=icloud.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=icloud.com;
+	s=1a1hai; t=1694768250;
+	bh=C7H8N2ZP6sqK1wTQ4FxKYM6yc/4/N6Ll0LJThs4Oi7o=;
+	h=Content-Type:From:Mime-Version:Date:Subject:Message-Id:To;
+	b=n+uTnTLR8Vzijgk7uAFtqd1H19S3k2p54yxv9S3ujpXwDwCC2auzcFX+4OdmNJSCc
+	 9u6U907/A7SA05PNHj26sBzBRw1KzoYrf2uIA/wICtxbot0FyJQjqjrcrx2C2J21J7
+	 +rf3TtHniWw60zu3NRZsIeKvZyvTeGdbCoOdieJf3BXH03IBYN+kvYdzPEC0rqZU55
+	 T+162Fu+X7k58yd9aq3ZJMCcaO4gHL1SI2OybkSJ0QWBA43yDsHe1/bWvaorD5lNiL
+	 qb5tdUvqGhanxL06CaavTEebpX/aW2aeeziNQZsmOx3yKY4U1dga/1nBEN//r8cHuM
+	 YEi/pVE4KvA8Q==
+Received: from smtpclient.apple (ci77p00im-dlb-asmtp-mailmevip.me.com [17.57.156.26])
+	by ci74p00im-qukt09090501.me.com (Postfix) with ESMTPSA id 1586746401CE;
+	Fri, 15 Sep 2023 08:57:29 +0000 (UTC)
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+From: =?utf-8?B?0JDQvdCw0YLQvtC70LjQuSDQn9C+0L3QvtC80LDRgNGR0LI=?= <foxskum@icloud.com>
+Mime-Version: 1.0 (1.0)
+Date: Fri, 15 Sep 2023 13:57:04 +0500
+Subject: =?utf-8?B?0KLQtdGB0YIg?=
+Message-Id: <DC135660-0E0C-4E68-AADC-AD4028BC53B1@icloud.com>
+To: wire.common@gmail.com
+X-Mailer: iPhone Mail (21A5312c)
+X-Proofpoint-GUID: x4as-lWFd74Ces--tmNSqYpfpehDZaz9
+X-Proofpoint-ORIG-GUID: x4as-lWFd74Ces--tmNSqYpfpehDZaz9
+X-Proofpoint-Virus-Version: =?UTF-8?Q?vendor=3Dfsecure_engine=3D1.1.170-22c6f66c430a71ce266a39bfe25bc?=
+ =?UTF-8?Q?2903e8d5c8f:6.0.138,18.0.572,17.0.605.474.0000000_definitions?=
+ =?UTF-8?Q?=3D2020-02-14=5F11:2020-02-14=5F02,2020-02-14=5F11,2020-01-23?=
+ =?UTF-8?Q?=5F02_signatures=3D0?=
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0 bulkscore=0 mlxscore=0
+ phishscore=0 clxscore=1011 adultscore=0 mlxlogscore=639 malwarescore=0
+ spamscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.12.0-2212070000 definitions=main-2309150078
+
+0KLQtdGB0YLQuNGA0L7QstCw0L3QuNC1INC+0YLQv9GA0LDQstC60Lgg0L/QuNGB0YzQvNCwINGB
+IGlDbG91ZA0K

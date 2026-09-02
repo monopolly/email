@@ -1,0 +1,89 @@
+Received: from localhost (localhost [127.0.0.1])
+	by mx.comfortel.pro (Postfix) with ESMTP id BF10C1423036
+	for <stas1kz@senthy.com>; Thu,  2 May 2024 15:46:44 +0300 (MSK)
+Received: from mx.comfortel.pro ([127.0.0.1])
+	by localhost (mx.comfortel.pro [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id d7QQbu2qv4wr; Thu,  2 May 2024 15:46:44 +0300 (MSK)
+Received: from localhost (localhost [127.0.0.1])
+	by mx.comfortel.pro (Postfix) with ESMTP id 74BCD1423045;
+	Thu,  2 May 2024 15:46:44 +0300 (MSK)
+DKIM-Filter: OpenDKIM Filter v2.10.3 mx.comfortel.pro 74BCD1423045
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comfortel.pro;
+	s=4E883236-D995-11E6-9D64-1140520CCF2F; t=1714654004;
+	bh=AKie/+YT/o9wLw4RBfLtx/BI8/tKFs2I+4hT1BWIP1w=;
+	h=From:Message-ID:Date:MIME-Version;
+	b=b8ODC0SQn21mx7973O9VNGm6A2fv/P6GPPD5wktkGDQswyiyALaN4VYuLZQG94Yjm
+	 ARq2bLRl1Wu8gH2v/PLP3AWtyt9lkL5Ab6NIDWJJm2ewE67Ehu1bNz6UJ26vRqSTj/
+	 eyzY7bXcjruiRxnxFClRfQQr8T+JC3x9J5oeaWoWZDotHwYM92kdygHOjP+FhWbltb
+	 RVUqAvAwrrb7JVLGE3Q3UN3ebd6Y8cHUylsLKrM3Tyt8f22tAo1Z69kKuSP6K+knJt
+	 Yim9jfl/0lEs25ogQxHOv0WcD0UCPiscb5v1VNJvjayQlqMVjix5Uj4KFNseTN61hE
+	 DY+ilujT0jJvQ==
+X-Virus-Scanned: amavisd-new at mx.comfortel.pro
+Received: from mx.comfortel.pro ([127.0.0.1])
+	by localhost (mx.comfortel.pro [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id KGaigGrt__4A; Thu,  2 May 2024 15:46:44 +0300 (MSK)
+Received: from mx.comfortel.pro (localhost [127.0.0.1])
+	by mx.comfortel.pro (Postfix) with ESMTP id 578801423036
+	for <stas1kz@senthy.com>; Thu,  2 May 2024 15:46:44 +0300 (MSK)
+Received: from 45.140.76.141 (LHLO mx.comfortel.pro) (45.140.76.141) by
+ mx.comfortel.pro with LMTP; Thu, 2 May 2024 15:46:43 +0300 (MSK)
+Received: from localhost (localhost [127.0.0.1])
+	by mx.comfortel.pro (Postfix) with ESMTP id 499FE1422E28;
+	Thu,  2 May 2024 15:46:43 +0300 (MSK)
+Received: from mx.comfortel.pro ([127.0.0.1])
+	by localhost (mx.comfortel.pro [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id AxC0IG4_IEYI; Thu,  2 May 2024 15:46:42 +0300 (MSK)
+Received: from localhost (localhost [127.0.0.1])
+	by mx.comfortel.pro (Postfix) with ESMTP id 9385F1423036;
+	Thu,  2 May 2024 15:46:42 +0300 (MSK)
+DKIM-Filter: OpenDKIM Filter v2.10.3 mx.comfortel.pro 9385F1423036
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comfortel.pro;
+	s=4E883236-D995-11E6-9D64-1140520CCF2F; t=1714654002;
+	bh=AKie/+YT/o9wLw4RBfLtx/BI8/tKFs2I+4hT1BWIP1w=;
+	h=From:Message-ID:Date:MIME-Version;
+	b=URInNtdBTaryCChV0nRlVuFjs3wFFgsvENe7g+uVHWwuYO1E4qm150mhScA/ktud2
+	 G7vc4jderPqhMuzJrvH231kTpJZCqYAqe1CfNzJP5VXnzSyso+HHHz4bUYtPVvd0mI
+	 LY8kGbtiw46/D+lcJkLKkyTErJUbkzl0tqHKia7IQYDoZYVdPIONpV5f7sxM6IqQ1n
+	 dA248VYm4ajAwfhNo9OWKdWKNA6pBuCKgitRg9f3JEGYR+MEZbiDdlyV9/nKlQw8xU
+	 4N7T+tyJFPHl1QskgcciZUNn2PDnpqoRe+Ta/UTC/AM312u/ldvtijrrMiaOD0opP5
+	 gT82dGdmU6NXA==
+X-Virus-Scanned: amavisd-new at mx.comfortel.pro
+Received: from mx.comfortel.pro ([127.0.0.1])
+	by localhost (mx.comfortel.pro [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id WnsV4hNAgkya; Thu,  2 May 2024 15:46:42 +0300 (MSK)
+Received: from tickets.comfortel.pro (tickets.comfortel.pro [45.140.76.207])
+	by mx.comfortel.pro (Postfix) with ESMTP id 1DE0E1422E28;
+	Thu,  2 May 2024 15:46:42 +0300 (MSK)
+Received: by tickets.comfortel.pro (Postfix, from userid 999)
+	id 98E7961356; Thu,  2 May 2024 15:46:41 +0300 (MSK)
+Subject: [tickets.comfortel.pro #705954] Call from 79996030636 at 15:46:41 02.05.2024 for  to support
+From: "rt-support-calls-comment@tickets.comfortel.pro via RT" <support@comfortel.pro>
+Reply-To: support@comfortel.pro
+In-Reply-To: <20240502124641.80B13C19B2@sip3.comfortel.pro>
+References: <RT-Ticket-705954@tickets.comfortel.pro>
+ <20240502124641.80B13C19B2@sip3.comfortel.pro>
+Message-ID: <rt-4.4.2-5408-1714654001-656.705954-4-0@tickets.comfortel.pro>
+X-RT-Loop-Prevention: tickets.comfortel.pro
+X-RT-Ticket: tickets.comfortel.pro #705954
+X-Managed-BY: RT 4.4.2 (http://www.bestpractical.com/rt/)
+X-RT-Originator: rt-support-calls-comment@tickets.comfortel.pro
+Content-Type: text/plain; charset="utf-8"
+X-RT-Original-Encoding: utf-8
+Precedence: bulk
+Date: Thu, 02 May 2024 15:46:41 +0300
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+X-Zimbra-Forwarded: st@comfortel.pro
+
+
+Thu May 02 15:46:41 2024: Request 705954 was acted upon.
+       Queue: support
+     Subject: Call from 79996030636 at 15:46:41 02.05.2024 for  to suppor=
+t=20
+  Requestors: rt-support-calls-comment@tickets.comfortel.pro
+ Ticket <URL: https://tickets.comfortel.pro/Ticket/Display.html?id=3D7059=
+54 >
+
+
+Call from 79996030636 at 15:46:41 02.05.2024 to support queue to=20
+

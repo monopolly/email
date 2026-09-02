@@ -1,0 +1,134 @@
+Stories for Wire Common
+@wire.common (https://medium.com/@wire.common?source=email-94c83c19f710-1694650296596-digest.reader-------------------------c7416015_2423_4645_ab21_b3fb17e0ff0d)
+·Become a member (https://medium.com/plans?source=email-94c83c19f710-1694650296596-digest.reader-------------------------c7416015_2423_4645_ab21_b3fb17e0ff0d)
+
+Today's highlights
+
+Nick Hilton (https://medium.com/@nickfthilton?source=email-94c83c19f710-1694650296596-digest.reader--ed197f252c6a----0-102------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·10 min read
+
+The End of the Subscription Era is Coming
+
+You're overpaying for your porn (and journalism)
+
+Prithwish Nath (https://medium.com/@prithwish.nath?source=email-94c83c19f710-1694650296596-digest.reader-4b3a1ed4f11c-b802599a338c----1-102------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+ in JavaScript in Plain English (https://medium.com/javascript-in-plain-english?source=email-94c83c19f710-1694650296596-digest.reader-4b3a1ed4f11c-b802599a338c----1-102------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·13 min read
+
+An Introduction to Federated GraphQL - and WunderGraph Cosmo
+
+Federated GraphQL architectures are the way forward for modular microservices-based development. But what…
+
+Zafar Ivaev (https://medium.com/@z.ivaev?source=email-94c83c19f710-1694650296596-digest.reader-5517fd7b58a6-a8d5bdab8398----2-102------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+ in Level Up Coding (https://medium.com/gitconnected?source=email-94c83c19f710-1694650296596-digest.reader-5517fd7b58a6-a8d5bdab8398----2-102------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·19 min read
+
+How to Modularize an iOS App
+
+Leveraging XcodeGen and Clean Architecture principles
+
+Igor Carvalho (https://medium.com/@igorcarvalho.phone?source=email-94c83c19f710-1694650296596-digest.reader--e8ecb133d3f8----3-98------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·9 min read
+
+Go lang: From 0 to Employed
+
+S.O.L.I.D principles :: Introduction
+
+Clark (https://medium.com/@cercinus?source=email-94c83c19f710-1694650296596-digest.reader-d1f54550947b-1d55df11da5f----4-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+ in Mac O'Clock (https://medium.com/macoclock?source=email-94c83c19f710-1694650296596-digest.reader-d1f54550947b-1d55df11da5f----4-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·13 min read
+
+Top 10 Must-Have Apple Apps - September 2023
+
+Apps to Elevate Your Health, Enhance Your Mac, AR for Your Car, and More!
+
+Kim Kelly Stamp (https://medium.com/@kimkellywrites?source=email-94c83c19f710-1694650296596-digest.reader-a89def03f546-98371171166f----5-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+ in The Narrative Arc (https://medium.com/the-narrative-arc?source=email-94c83c19f710-1694650296596-digest.reader-a89def03f546-98371171166f----5-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·5 min read
+
+A Secret Marriage Was Our Only Option
+
+It was a difficult secret to keep
+
+Nir Eyal (https://medium.com/@nireyal?source=email-94c83c19f710-1694650296596-digest.reader-dae9eb59ccd1-d3a7f06be05c----6-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+ in Psychology of Stuff (https://medium.com/behavior-design?source=email-94c83c19f710-1694650296596-digest.reader-dae9eb59ccd1-d3a7f06be05c----6-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·4 min read
+
+When Do You Feel Most Creative? Why Ideas Bloom at Bedtime
+
+Schedule time for mind wandering
+
+Stephen Moore (https://medium.com/@stephenmoore?source=email-94c83c19f710-1694650296596-digest.reader--25a9a3c70cb0----7-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·5 min read
+
+The Tech Elite's "Utopian" Dream
+
+Welcome to "California Forever" (if you're rich enough)
+
+Arangott Ramesh Chandran (https://medium.com/@ramesh_aran86?source=email-94c83c19f710-1694650296596-digest.reader--e3f66c9006f2----8-98------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·9 min read
+
+How to Use VisionKit in SwiftUI for Text and Barcode Scanning on iOS?
+
+Introducing DataScannerViewController
+
+All My Little Words (https://medium.com/@allmylittlewords?source=email-94c83c19f710-1694650296596-digest.reader-799d3fa3e120-6654912446cc----9-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+ in Three Imaginary Girls (https://medium.com/three-imaginary-girls?source=email-94c83c19f710-1694650296596-digest.reader-799d3fa3e120-6654912446cc----9-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·8 min read
+
+Me and Amy Winehouse
+
+Remembering Amy on what would've been her 40th birthday
+
+DC Palter (https://medium.com/@dcpalter?source=email-94c83c19f710-1694650296596-digest.reader-7adf33e44ae3-2a0a3328154b----10-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+ in Entrepreneur's Handbook (https://medium.com/entrepreneur-s-handbook?source=email-94c83c19f710-1694650296596-digest.reader-7adf33e44ae3-2a0a3328154b----10-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·6 min read
+
+Patents: Utterly Useless and Absolutely Essential For Startups
+
+Though patents won't provide value for years, startups need to build a competitive moat from the beginning
+
+Jeff Davidson (https://medium.com/@jeffdavidsond?source=email-94c83c19f710-1694650296596-digest.reader-eb297ea1161a-1c1cb188931----11-102------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+ in Prototypr (https://medium.com/prototypr?source=email-94c83c19f710-1694650296596-digest.reader-eb297ea1161a-1c1cb188931----11-102------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·8 min read
+
+The Most Important Rule in UX Design that Everyone Breaks
+
+In Product Design, and Possibly Life Management
+
+Wahyuni Sapri (https://medium.com/@wahyunisapri?source=email-94c83c19f710-1694650296596-digest.reader-7038e003d060-d30859d3bee1----12-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+ in Better Humans (https://medium.com/better-humans?source=email-94c83c19f710-1694650296596-digest.reader-7038e003d060-d30859d3bee1----12-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·7 min read
+
+One Research-Backed Method To Deal With Uncertainty
+
+Sometimes, the way our bodies feel can affect how we decide things.
+
+Alisa Wolf (https://medium.com/@aruthwolf?source=email-94c83c19f710-1694650296596-digest.reader-206901490aa4-e31d2e0887dc----13-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+ in Crow's Feet (https://medium.com/crows-feet?source=email-94c83c19f710-1694650296596-digest.reader-206901490aa4-e31d2e0887dc----13-96------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·6 min read
+
+A Retiree's Day Off
+
+My path from denial to acceptance of life without a job.
+
+AL Anany (https://medium.com/@alanany?source=email-94c83c19f710-1694650296596-digest.reader--426d5e3f7d05----14-102------------------c7416015_2423_4645_ab21_b3fb17e0ff0d-1)
+·6 min read
+
+The ChatGPT Hype Is Over - Now Watch How Google Will Kill ChatGPT.
+
+It never happens instantly. The business game is longer than you know.
+
+See more of what you like and less of what you don't.
+Control your recommendations (https://medium.com/me/missioncontrol?source=email-94c83c19f710-1694650296596-digest.reader-------------------------c7416015_2423_4645_ab21_b3fb17e0ff0d)
+
+Read from anywhere.
+
+Sent by Medium (https://medium.com/?source=email-94c83c19f710-1694650296596-digest.reader-------------------------c7416015_2423_4645_ab21_b3fb17e0ff0d)
+·Medium, 548 Market St, PMB 42061, San Francisco, CA 94104
+Unsubscribe (https://medium.com/me/email-settings/94c83c19f710/19d54ac020d0?type=social&source=email-94c83c19f710-1694650296596-digest.reader-------------------------c7416015_2423_4645_ab21_b3fb17e0ff0d)
+ from this type of email·Switch to the Weekly Digest (https://medium.com/me/email-settings/94c83c19f710/19d54ac020d0?type=social&preference=2&source=email-94c83c19f710-1694650296596-digest.reader-------------------------c7416015_2423_4645_ab21_b3fb17e0ff0d)
+·Careers (https://medium.com/jobs-at-medium/work-at-medium-959d1a85284e?source=email-94c83c19f710-1694650296596-digest.reader-------------------------c7416015_2423_4645_ab21_b3fb17e0ff0d)
+·Help Center (https://help.medium.com/hc/en-us?source=email-94c83c19f710-1694650296596-digest.reader-------------------------c7416015_2423_4645_ab21_b3fb17e0ff0d)
+·Privacy Policy (https://policy.medium.com/medium-privacy-policy-f03bf92035c9?source=email-94c83c19f710-1694650296596-digest.reader-------------------------c7416015_2423_4645_ab21_b3fb17e0ff0d)
+·Terms of service (https://policy.medium.com/medium-terms-of-service-9db0094a1e0f?source=email-94c83c19f710-1694650296596-digest.reader-------------------------c7416015_2423_4645_ab21_b3fb17e0ff0d)

@@ -1,0 +1,37 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220321T070000Z
+DTEND:20220321T080000Z
+DTSTAMP:20220320T124314Z
+ORGANIZER;CN=dm@embacy.io:mailto:dm@embacy.io
+UID:4gr0f998df5dd2csavq963dgi2@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=a@senthy.com;X-NUM-GUESTS=0:mailto:a@senthy.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=dm@embacy.io;X-NUM-GUESTS=0:mailto:dm@embacy.io
+X-MICROSOFT-CDO-OWNERAPPTID:1592395681
+CREATED:20220320T124245Z
+DESCRIPTION:Встреча будет по ссылке:\n\nLaborX + Embacy. Gigs screen-map\nП
+ онедельник\, 21 марта · 10:00–11:00AM\nКонтактная информация для встречи в 
+ Google Meet\nСсылка: https://meet.google.com/ccv-vxfb-ydt\nНомер телефона: 
+ PIN-код для номера ‪(LV) +371 65 093 000‬: ‪416 881 073 8313‬#\nДополнитель
+ ные номера: https://tel.meet/ccv-vxfb-ydt?pin=4168810738313\n\n-::~:~::~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+ \nНе редактируйте этот раздел описания.\n\nПросмотрите свое мероприятие на 
+ странице https://calendar.google.com/calendar/event?action=VIEW&eid=NGdyMGY
+ 5OThkZjVkZDJjc2F2cTk2M2RnaTIgYUBzZW50aHkuY29t&tok=MTIjZG1AZW1iYWN5LmlvM2Q4O
+ TQzZWM5YmUyN2NiNzI2NDFhNDg0YjVmNzRkMjc0ZDg2YzhjNw&ctz=Europe%2FMoscow&hl=ru
+ &es=0.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220320T124313Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Встреча с LaborX
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

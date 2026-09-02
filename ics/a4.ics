@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220323T060000Z
+DTEND:20220323T070000Z
+DTSTAMP:20220321T081804Z
+ORGANIZER;CN=dm@embacy.io:mailto:dm@embacy.io
+UID:6f5h4tdji3sb6nq2j7lvi078js@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=a@senthy.com;X-NUM-GUESTS=0:mailto:a@senthy.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=dm@embacy.io;X-NUM-GUESTS=0:mailto:dm@embacy.io
+X-MICROSOFT-CDO-OWNERAPPTID:-5980992
+CREATED:20220321T081750Z
+DESCRIPTION:[LaborX] Gigs review\nСреда\, 23 марта · 9:00–10:00AM\nКонтактн
+ ая информация для встречи в Google Meet\nСсылка: https://meet.google.com/gi
+ q-miyh-eui\nНомер телефона: PIN-код для номера ‪(RU) +7 499 951-64-31‬: ‪83
+ 6 193 425 2198‬#\nДополнительные номера: https://tel.meet/giq-miyh-eui?pin=
+ 8361934252198\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~::~:~::-\nНе редактируйте этот раздел описания.\n\nПро
+ смотрите свое мероприятие на странице https://calendar.google.com/calendar/
+ event?action=VIEW&eid=NmY1aDR0ZGppM3NiNm5xMmo3bHZpMDc4anMgYUBzZW50aHkuY29t&
+ tok=MTIjZG1AZW1iYWN5LmlvMGU2ZTUzYjg2YjY3OWE2NjlkMzcyOTgzODNjMmM3ZTg5OWJlMDh
+ kOQ&ctz=Europe%2FMoscow&hl=ru&es=0.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220321T081803Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LaborX Gigs review с клиентом
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

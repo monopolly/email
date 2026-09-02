@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220330T060000Z
+DTEND:20220330T070000Z
+DTSTAMP:20220328T084542Z
+ORGANIZER;CN=dm@embacy.io:mailto:dm@embacy.io
+UID:4bspftc9t20912dg4dapvlbufp@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=a@senthy.com;X-NUM-GUESTS=0:mailto:a@senthy.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=dm@embacy.io;X-NUM-GUESTS=0:mailto:dm@embacy.io
+X-GOOGLE-CONFERENCE:https://meet.google.com/xrd-xufn-cty
+X-MICROSOFT-CDO-OWNERAPPTID:-1214280577
+CREATED:20220328T084541Z
+DESCRIPTION:[LaborX] Пречек UI\nСреда\, 30 марта · 9:00–10:00AM\nКонтактная
+  информация для встречи в Google Meet\nСсылка: https://meet.google.com/cmo-
+ geqz-twg\nНомер телефона: PIN-код для номера ‪(RU) +7 499 951-64-31‬: ‪683 
+ 973 734 3352‬#\nДополнительные номера: https://tel.meet/cmo-geqz-twg?pin=68
+ 39737343352\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~::~:~::-\nНе редактируйте этот раздел описания.\n\nЭто м
+ ероприятие проводится в формате видеовстречи.\nВидеовызов: https://meet.goo
+ gle.com/xrd-xufn-cty\n(RU) +7 499 951-64-31 PIN-код: 1742333141297#\nПоказа
+ ть другие номера телефонов: https://tel.meet/xrd-xufn-cty?pin=1742333141297
+ &hs=7\n\nПросмотрите свое мероприятие на странице https://calendar.google.c
+ om/calendar/event?action=VIEW&eid=NGJzcGZ0Yzl0MjA5MTJkZzRkYXB2bGJ1ZnAgYUBzZ
+ W50aHkuY29t&tok=MTIjZG1AZW1iYWN5LmlvZDk0MzFmZGQ1OWIyOTY0NmIwYzlkYTdjYWE2MmJ
+ hYjM3ZDM4ZDVkMg&ctz=Europe%2FMoscow&hl=ru&es=1.\n-::~:~::~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220328T084541Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:(внешняя) пречек UI LaborX
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

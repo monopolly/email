@@ -1,0 +1,49 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220331T080000Z
+DTEND:20220331T090000Z
+DTSTAMP:20220330T125943Z
+ORGANIZER;CN=dm@embacy.io:mailto:dm@embacy.io
+UID:3guhpc7ij0tltct5kaj5oe09hb@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=ebardasheva@gmail.com;X-NUM-GUESTS=0:mailto:ebardasheva@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=dm@embacy.io;X-NUM-GUESTS=0:mailto:dm@embacy.io
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=a@senthy.com;X-NUM-GUESTS=0:mailto:a@senthy.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/gmd-phuo-hmp
+X-MICROSOFT-CDO-OWNERAPPTID:-1678843805
+CREATED:20220329T072245Z
+DESCRIPTION:Привет\, Лена\, Сергей! \n\nСергей с нами до конца недели\, в р
+ амках которой мы постараемся достичь максимального результата. Предлагаю вс
+ третиться в ЧТ чтобы до конца недели суметь задать друг другу максимум вопр
+ осов в процессе передачи проекта.\n\nПовестка:\n1/ Я расскажу про продукт\,
+  цели и задачи\, которые мы решаем в рамках проекта.\n2/ Посмотрим на текущ
+ ие наработки.\n3/ Расскажу про план проекта\n4/ Расскажу про ритм\, в котор
+ ом работаем с командой клиента и внутри себя.\n\nВстречу ставлю на 1\,5 час
+ а - но можем раскидаться и быстрее.\n\nПлан в ПТ утром показать результаты 
+ (план этой недели это сценарии GIGS и JOBS в UI с ресайзами для передачи в 
+ верстку). Надеемся\, что успеем. В ПТ же предлагаю познакомиться с клиентом
+  - встречи у нас с ними в 9 утра по причине того\, что это Австралия. \n\n-
+ ::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~::~:~::-\nНе редактируйте этот раздел описания.\n\nЭто мероприятие прово
+ дится в формате видеовстречи.\nВидеовызов: https://meet.google.com/gmd-phuo
+ -hmp\n(RU) +7 499 951-64-31 PIN-код: 3499459496206#\nПоказать другие номера
+  телефонов: https://tel.meet/gmd-phuo-hmp?pin=3499459496206&hs=7\n\nПросмот
+ рите свое мероприятие на странице https://calendar.google.com/calendar/even
+ t?action=VIEW&eid=M2d1aHBjN2lqMHRsdGN0NWthajVvZTA5aGIgYUBzZW50aHkuY29t&tok=
+ MTIjZG1AZW1iYWN5LmlvYjRhOGI3OTU2MmJlZmNlMDNhZjcwNzhjZTNkZDE1YTIwZGQwNTRmOA&
+ ctz=Europe%2FMoscow&hl=ru&es=0.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220330T125942Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LaborX Design Project Handoff
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

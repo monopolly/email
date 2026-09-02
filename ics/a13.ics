@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20221006T090000Z
+DTEND:20221006T100000Z
+DTSTAMP:20221005T140624Z
+ORGANIZER;CN=cfst.elena@gmail.com:mailto:cfst.elena@gmail.com
+UID:5v1mv1jn9ufitkvd3praf2k6l6@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=zlumer@gmail.com;X-NUM-GUESTS=0:mailto:zlumer@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=cfst.elena@gmail.com;X-NUM-GUESTS=0:mailto:cfst.elena@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=a@senthy.com;X-NUM-GUESTS=0:mailto:a@senthy.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/ggb-cufy-uhg
+X-MICROSOFT-CDO-OWNERAPPTID:824704998
+CREATED:20221005T140622Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nВидеовызов: https://meet.google.com/ggb-cufy-uhg\
+ n\nНе изменяйте данные в этом разделе.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20221005T140622Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Кофештамп & Сергей
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

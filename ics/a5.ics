@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220322T100000Z
+DTEND:20220322T103000Z
+DTSTAMP:20220322T082021Z
+ORGANIZER;CN=dm@embacy.io:mailto:dm@embacy.io
+UID:0vlp0r84gd0qtmbr781ev810c2@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=a@senthy.com;X-NUM-GUESTS=0:mailto:a@senthy.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=dm@embacy.io;X-NUM-GUESTS=0:mailto:dm@embacy.io
+X-GOOGLE-CONFERENCE:https://meet.google.com/tiq-jktg-oad
+X-MICROSOFT-CDO-OWNERAPPTID:-564813394
+CREATED:20220322T082003Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nНе редактируйте этот раздел описания.\n\nЭто меро
+ приятие проводится в формате видеовстречи.\nВидеовызов: https://meet.google
+ .com/tiq-jktg-oad\n(RU) +7 499 951-64-31 PIN-код: 2953857839048#\nПоказать 
+ другие номера телефонов: https://tel.meet/tiq-jktg-oad?pin=2953857839048&hs
+ =7\n\nПросмотрите свое мероприятие на странице https://calendar.google.com/
+ calendar/event?action=VIEW&eid=MHZscDByODRnZDBxdG1icjc4MWV2ODEwYzIgYUBzZW50
+ aHkuY29t&tok=MTIjZG1AZW1iYWN5LmlvODQxZjAxZDg2YTVkMWJkYTI1YTUxNjcyNWQ0YTdkYT
+ QyNTBlNjY2ZA&ctz=Europe%2FMoscow&hl=ru&es=1.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220322T082019Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:(внутренняя) структура LaborX
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

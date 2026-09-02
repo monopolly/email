@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220818T100000Z
+DTEND:20220818T103000Z
+DTSTAMP:20220816T132713Z
+ORGANIZER;CN=natalie.lomakina@agoraworld.co:mailto:natalie.lomakina@agorawo
+ rld.co
+UID:391vk9v3471v0hcpr4qig8o0uv@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=lizzie@agoraworld.co;X-NUM-GUESTS=0:mailto:lizzie@agoraworld.co
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=natalie.lomakina@agoraworld.co;X-NUM-GUESTS=0:mailto:natalie.lomakina@a
+ goraworld.co
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=a@senthy.com;X-NUM-GUESTS=0:mailto:a@senthy.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/joo-vama-xvu
+X-MICROSOFT-CDO-OWNERAPPTID:-783140323
+CREATED:20220816T102937Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nDo not edit this section of the description.\n\nT
+ his event has a video call.\nJoin: https://meet.google.com/joo-vama-xvu\n(R
+ U) +7 499 951-64-31 PIN: 1273101143630#\nView more phone numbers: https://t
+ el.meet/joo-vama-xvu?pin=1273101143630&hs=7\n\nView your event at https://c
+ alendar.google.com/calendar/event?action=VIEW&eid=Mzkxdms5djM0NzF2MGhjcHI0c
+ WlnOG8wdXYgYUBzZW50aHkuY29t&tok=MzAjbmF0YWxpZS5sb21ha2luYUBhZ29yYXdvcmxkLmN
+ vMjg5ZDY0NzlkZDZjM2JiM2ViYzYwNTQ3ZTg4ODE0ZjJlYTkzMjgxOQ&ctz=Europe%2FLondon
+ &hl=en&es=0.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220816T132712Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Designer Sergey Keplin
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

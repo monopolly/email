@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220401T060000Z
+DTEND:20220401T070000Z
+DTSTAMP:20220328T084700Z
+ORGANIZER;CN=dm@embacy.io:mailto:dm@embacy.io
+UID:32vn465h8b870n60kicpmo65o4@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=a@senthy.com;X-NUM-GUESTS=0:mailto:a@senthy.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=dm@embacy.io;X-NUM-GUESTS=0:mailto:dm@embacy.io
+X-GOOGLE-CONFERENCE:https://meet.google.com/cyy-nntd-zbe
+X-MICROSOFT-CDO-OWNERAPPTID:-1096937016
+CREATED:20220328T084659Z
+DESCRIPTION:[LaborX] Чек UI гиги и jobs\nПятница\, 1 апреля · 9:00–10:00AM\
+ nКонтактная информация для встречи в Google Meet\nСсылка: https://meet.goog
+ le.com/kbb-ctrn-zdu\nНомер телефона: PIN-код для номера ‪(RU) +7 499 951-64
+ -31‬: ‪236 826 355 7636‬#\nДополнительные номера: https://tel.meet/kbb-ctrn
+ -zdu?pin=2368263557636\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nНе редактируйте этот раздел описани
+ я.\n\nЭто мероприятие проводится в формате видеовстречи.\nВидеовызов: https
+ ://meet.google.com/cyy-nntd-zbe\n(RU) +7 499 951-64-31 PIN-код: 79612220049
+ 33#\nПоказать другие номера телефонов: https://tel.meet/cyy-nntd-zbe?pin=79
+ 61222004933&hs=7\n\nПросмотрите свое мероприятие на странице https://calend
+ ar.google.com/calendar/event?action=VIEW&eid=MzJ2bjQ2NWg4Yjg3MG42MGtpY3Btbz
+ Y1bzQgYUBzZW50aHkuY29t&tok=MTIjZG1AZW1iYWN5LmlvYzkzNGI1NWI0MGE4MjYzNTZlYTEx
+ NmUyZTdhMGZiYTM1NWQ0NjAzMA&ctz=Europe%2FMoscow&hl=ru&es=1.\n-::~:~::~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220328T084659Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:(внешняя) LaborX gigs & jobs @UI
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
