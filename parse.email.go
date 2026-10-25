@@ -62,8 +62,8 @@ func ParseRawEmail(raw []byte) (r *Email, err error) {
 			t = strings.ReplaceAll(t, ",", " ")
 			t = strings.ReplaceAll(t, ";", " ")
 			t = strings.ToLower(t)
-			list := strings.Fields(t)
-			for _, x := range list {
+			list := strings.FieldsSeq(t)
+			for x := range list {
 				if !strings.Contains(x, "@") {
 					continue
 				}
