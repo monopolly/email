@@ -1,0 +1,185 @@
+Subj: View Transitions, Stylish Shadows, and a Pixelated Waterfall
+From: CodePen <support@codepen.io>
+To: lava.mobi@gmail.com
+Forward: lava.mobi@gmail.com
+Date: 2023-09-11 19:13:22
+ID: <89.00.37300.BD66FF46@gz.mta1vrest.cc.prd.sparkpost>
+Unsubscribe: mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:E9cZbeZT35b7uZSMaYfCkjw4DLtWHs2AAQwv1p4sBPI~|eyAicmNwdF90byI6ICJsYXZhLm1vYmlAZ21haWwuY29tIiwgInRlbmFudF9pZCI6ICJzcGMiLCAiY3VzdG9tZXJfaWQiOiAiMTc1MzQiLCAibWVzc2FnZV9pZCI6ICI2NGZhZGI2NmZmNjQwNjY1OTgwMCIsICJzdWJhY2NvdW50X2lkIjogIjAiIH0~
+ParserHTML: true
+Text: 21019 bytes, HTML: 54562 bytes
+
+--- markdown ---
+View this issue on [CodePen](go.senthy.com/5849bb79)
+
+View Transitions, Stylish Shadows, and a Pixelated Waterfall
+
+This week's CodePen community highlights includes a big dose of the view transitions API: a bookmark app UI from Aysenur Turk, and a tremendous guide to the in-and-outs of the API from Mojtaba Seyedi.
+
+Plus, Temani Afif and Adam Argyle share stylish image shadows, and Kit Jenson sends a barrel down a pixelated waterfall that has a secret!
+
+[spmailtechnolo.com](go.senthy.com/990b6279)
+
+pen
+Merging Letter [Toggle](go.senthy.com/990b6279)
+
+A toggle switch combined with FF or N to spell “OFF” or “ON”, and the letters merge or split depending on the state. From Jon Kantner.
+[spmailtechnolo.com](go.senthy.com/7ad5da76)
+
+pen
+Bookmark App - View [Transitions](go.senthy.com/7ad5da76)
+
+Aysenur Turk translates a Dribbble shot by [Dwinawan](go.senthy.com/b881e0bb)
+to SCSS & JS, and demonstrates the panache of the view transitions API in this irresistibly clickable Pen.
+[spmailtechnolo.com](go.senthy.com/d437af44)
+
+pen
+Svelte Range [Slider](go.senthy.com/d437af44)
+
+Simon Goellner adds fancy, bouncy, floating labels that wave as you drag the pips along the range slider in this interactive Pen, inspired by a Dribble shot by Antonin Kus go.senthy.com/8da0a298.
+[spmailtechnolo.com](go.senthy.com/f9e18705)
+
+pen
+GSAP Mask Mouse [Effect](go.senthy.com/f9e18705)
+
+alig01 reveals a hidden truth of the internet with a slick spotlight effect in this GSAP-powered Pen.
+[spmailtechnolo.com](go.senthy.com/d5c80def)
+
+link
+What is the View [Transitions API?](go.senthy.com/d5c80def)
+
+Mojtaba Seyedi wrote a comprehensive guide to the power of the View Transitions API, complete with lots of linked & embedded Pens so you can jump right in and try it yourself.
+[spmailtechnolo.com](go.senthy.com/9eb268d2)
+
+pen
+Infinite Image [Shadow](go.senthy.com/9eb268d2)
+
+In Temani Afif's Pen, photos cast colorful shadows that stretch onnnnnnnn and on forever — in both square and rounded corner varieties.
+
+[spmailtechnolo.com](go.senthy.com/dbd95433)
+
+collection
+[#CodePenChallenge: Pagination](go.senthy.com/dbd95433)
+
+September's challenge is all about navigation, and we started with pagination. Page through our collection from week one, including Pens by [Grass](go.senthy.com/d16637c2)
+, Pierre-Nicolas [Picot](go.senthy.com/295c37ed)
+[, kotAndy](go.senthy.com/d85c3ba1)
+, and Josetxu go.senthy.com/917b60c8.
+[spmailtechnolo.com](go.senthy.com/063557c3)
+
+sponsor
+Master Composable Web [Architectures](go.senthy.com/063557c3)
+
+Dive into O'Reilly's new report by Stefan Baumgartner, author of TypeScript in 50 Lessons, and explore frontend composability, serverless backends & modular design. Available for free, courtesy of Storyblok, the beloved CMS committed to providing resources that empower you.
+[spmailtechnolo.com](go.senthy.com/4e7672cf)
+
+pen
+A real accordion AUDIO [WARNING](go.senthy.com/4e7672cf)
+
+Depending on how you look at it, David Darnes either wrecks a perfectly good accordion menu, or makes a typical menu actually kinda fun in this playful Pen.
+[spmailtechnolo.com](go.senthy.com/d2f46fb9)
+
+sponsor
+How do I model a schema for my [application?](go.senthy.com/d2f46fb9)
+
+It's one of the most common questions developers have when starting with MongoDB Atlas. And the answer is, it depends. In this article, learn the basics of data modeling you can use when designing the database schema for your application.
+[spmailtechnolo.com](go.senthy.com/bc3f4838)
+
+pen
+Waterfall & [Barrel](go.senthy.com/bc3f4838)
+
+A pixel-based waterfall. No reason... thought it would be a fun challenge. Of course I couldn't leave it alone, so now there is a hidden cave and floating barrel. Why, you ask? I don't know honestly. From Kit Jenson.
+[spmailtechnolo.com](go.senthy.com/d61d927a)
+
+pen highlight compliment to a text-shadow [effect](go.senthy.com/d61d927a)
+
+That 2px almost white highlight on the top of the text makes it seem as though there's a light source. From Adam Argyle.
+
+Chris’ Corner
+
+A collection of web design and development news and thoughts from CodePen's own Chris Coyier.
+
+I think the nail is in [coffin now](go.senthy.com/fa2bf910)
+: you should never design something for the web with only one or even a narrow set of particular viewport sizes in mind. It’s just so darn tempting to think that way. You have a couple of pretty specific screen sizes in front of you right now, you likely design toward those to some degree. Design tools often ask you to draw a rectangle that represent a screen to design for. Testing tools sometimes show you a site at a set of pre-set screen sizes. It can feel normal and fine to design toward, say, three sizes, and hone in on them. Honestly, that might end up working fine, but it might not! It might lead to some awkward in-betweens, especially if you are very rigid in writing CSS that only changes at those specific breakpoints only.
+
+That’s the thing, really. You just don’t have to think in really specific breakpoints anymore. Media query width breakpoints are still a fine tool, but now we’ve got viewport units, container units, container queries, calc/min/max/clamp, and all sorts of other stuff that allow you to design components and pages that work well and look good at the size and under the conditions they are in. It’s just a better way to code. But this stuff has only relatively recently arrived in CSS so it’ll take a minute for it all to settle in.
+
+This isn’t even really new news. Over a [decade ago](go.senthy.com/ed49458a)
+, I was like, yo, there are a ton of different sizes that your site is getting viewed at. Deal with it. Now we can properly.
+
+And now for something completely different
+
+Have websites gone to crap? Browse around popular sites, and I think you’ll land on an easy yes. Especially on mobile, cripes. Just to name a few: they are too slow to load, the ads and popups are too obtrusive, and there is too much usage of fixed-position elements that reduce usable area.
+
+This website User [Inyerface](go.senthy.com/04c968f3)
+satirized it recently, and it’s pretty funny ya know, if being intentionally frustrated is your thing, gamers should relate .
+
+People have been worried about this for ages, and it never seems to get any better.
+
+- Brad Frost called it BS go.senthy.com/af5e99d9.
+- A couple folks made [termsandconditions.game](go.senthy.com/98ddc4cd)
+mining these [patterns](go.senthy.com/f41c3bd9)
+for ideas.
+- Guangyi Li’s [how-i-experience-web-today.com](go.senthy.com/40ea5f0a)
+gets at the heart of the complete experience.
+- Tracking is a big part of this story, and [clickclickclick.click](go.senthy.com/99844d6b)
+pokes at that.
+
+This all just makes me sad. Fortunately, most things are fine go.senthy.com/f8a42af2.
+
+And now for something completely different
+
+Have you seen the [popover API](go.senthy.com/426fc6cf)
+? It’s a neat idea, already play-with-able in Chrome. Think styled tooltips. The idea is that you connect some interaction click of a button to toggling another element with more information or context. Amazingly, to me, this HTML totally works in Chrome with no CSS or JavaScript at all:
+
+button popovertarget= my-popover Open Popover /button
+
+div id= my-popover popover
+I am a popover with more information.
+
+You can style stuff with CSS of course, but the basics of the interaction work without. Like a details element.
+
+Anytime we get any form of “state management” outside of JavaScript, the people will play! There are countless games made in CSS thanks to the whole idea of the :checked selector in CSS and using the ~ combinator to select other elements.
+
+This time, leave it to Garth Heyes who has made [Tic-Tac-Toe](go.senthy.com/a93fa76b)
+entirely in HTML only. That’s gotta be a first.
+
+Wanna see it? Fair warning first. It’s 170 MB !! of HTML and “over half a million nodes”. Chrome really struggles with this. It took my machine maybe near a minute to even render the first page, and each click took a while as well. If you’re down try it, see the demo go.senthy.com/01055e6b.
+
+And now for something related but different
+
+So now that we’ve looked at something you absolutely shouldn’t do on the web, here’s Heather Buchel with some things you absolutely should do on the web go.senthy.com/3cedf6fe. Heather ain’t even mad that we’re building websites with newfangled tech and trying to share code across platforms and all that, but, just, like, don’t break stuff. Don’t break super duper basic stuff that websites easily do and are good for everyone. I’ll hijack her whole list, but of course go read it for more context:
+
+- Let me copy text so I can paste it.
+- If something navigates like a link, let me do link things.
+- Let me zoom in on my browser without the website getting all out of whack.
+- Do responsive things.
+- Let me have hover styles.
+- If the UI completely changes when I click on something, as if I’ve navigated to a new page, give me a browser history update and a new URL.
+- Let me see scroll bars.
+- Stop hijacking my typical browser shortcuts for use in your own app.
+
+Reasonable asks, no?
+
+And now for something along those same lines
+
+Onnnnneeee more thing you should be really careful about doing on the web. Adam Silver: The problem with sticky menus and what to do instead go.senthy.com/0c86bdce.
+
+One problem is fairly obvious with sticky menus: they overlap stuff! They get in the dang way far too often.
+
+But there are other things that cause problems that you might not see right away. Adam mentions zooming. One little zoom or too might kick a sticky/fixed element right off the page. Also, if something opens a sticky menu, and that menu happens to be taller than the viewport, you’ve got issues. You either need that area to be scrollable but nested scrolling sucks or you require users to scroll likely further than they want to just to see more of the menu. Ughghadk.
+
+Adam lists three more that are just as bad or worse, and even less obvious at first glance. I’ll force you over there to see them. But I’ll snag the good ending, featuring the alternatives:
+
+- Keep pages short : Sticky menus are a symptom of long pages so fix the root cause.
+- Just let users scroll : It’s a myth that scrolling is a problem. Even on mobile, the top of the page is a flick or 2 away mostly.
+- Put relevant links in context : For example, add a subscribe form to the end of a post or add a CTA to a pricing section.
+- Use a back-to-top link : They’re relatively unobtrusive but only do this once you exhaust the other options .
+
+[CodePen PRO](go.senthy.com/7752eb5b)
+
+Just tuck this into the ol' brain bank: CodePen hosted assets, a PRO [feature](go.senthy.com/e1691081)
+, serve those assets with full CORS permissions. If they didn't, you'd be fighting against cross-origin browser policies when you, for example, may want to fetch them in JavaScript. We just want to make that painless for you.
+
+You can adjust your email [preferences](go.senthy.com/789d0b44)
+any time, or instantly [opt out](go.senthy.com/99bfdc00)
+of emails of this kind. Need help with anything? Hit up support go.senthy.com/d08598e9.

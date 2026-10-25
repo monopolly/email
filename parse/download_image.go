@@ -1,25 +1,22 @@
-package email
+package parse
 
 import (
 	"fmt"
-	"hash/fnv"
 	"strings"
 	"sync"
 
 	"github.com/monopolly/file"
 	"github.com/monopolly/images"
+
+	"github.com/monopolly/email/tools"
+
+	"github.com/monopolly/email"
 )
 
-func hashlink(link string) string {
-	p := fnv.New32()
-	p.Write([]byte(link))
-	return fmt.Sprintf("%x", p.Sum(nil))
-}
-
 // download all valid images from all links
-func downloadImagesOld(links []string, options *Options) (images map[string]*File) {
+func downloadImagesOld(links []string, options *Options) (images map[string]*email.File) {
 	options.Log("download images")
-	images = make(map[string]*File)
+	images = make(map[string]*email.File)
 	if !options.Images {
 		return
 	}
@@ -35,9 +32,9 @@ func downloadImagesOld(links []string, options *Options) (images map[string]*Fil
 }
 
 // download all valid images from all links
-func downloadImages(links []string, options *Options) (images map[string]*File) {
+func downloadImages(links []string, options *Options) (images map[string]*email.File) {
 	options.Log("download images")
-	images = make(map[string]*File)
+	images = make(map[string]*email.File)
 	var lock sync.Mutex
 	if !options.Images {
 		return
@@ -68,7 +65,7 @@ func downloadImages(links []string, options *Options) (images map[string]*File) 
 }
 
 // download, check if valid image
-func downloadImage(link string, options *Options) (res *File) {
+func downloadImage(link string, options *Options) (res *email.File) {
 	options.Log("download image", link)
 
 	//_, temp, err := fasthttp.GetTimeout(nil, link, time.Second*10) //
@@ -100,12 +97,12 @@ func downloadImage(link string, options *Options) (res *File) {
 	}
 
 	options.Log("image", img.Ext, img.Width, "x", img.Height, len(temp)/1000, "kb")
-	n := new(File)
-	n.ID = fmt.Sprintf("%s.%s", hashlink(link), img.Ext)
+	n := new(email.File)
+	n.ID = fmt.Sprintf("%s.%s", tools.HashLink(link), img.Ext)
 	n.Body = temp
 	n.Size = len(temp)
 	n.Image = true
-	n.Name = fmt.Sprintf("%s.%s", hashlink(link), img.Ext)
+	n.Name = fmt.Sprintf("%s.%s", tools.HashLink(link), img.Ext)
 	options.Log("image name", n.Name)
 	n.Type = fmt.Sprintf("image/%s", img.Ext)
 	options.Log("is image")

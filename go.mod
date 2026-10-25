@@ -4,6 +4,7 @@ go 1.26
 
 require (
 	github.com/PuerkitoBio/goquery v1.13.0
+	github.com/gogs/chardet v0.0.0-20211120154057-b7413eaefb8f
 	github.com/jhillyerd/enmime/v2 v2.4.1
 	github.com/k3a/html2text v1.4.0
 	github.com/monopolly/errors v0.0.0-20260801224256-3d6e4411d2a3
@@ -40,7 +41,6 @@ require (
 	github.com/go-faster/city v1.0.1 // indirect
 	github.com/go-faster/errors v0.7.1 // indirect
 	github.com/goccy/go-json v0.10.6 // indirect
-	github.com/gogs/chardet v0.0.0-20211120154057-b7413eaefb8f // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/inbucket/html2text v1.0.0 // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect

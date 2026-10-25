@@ -1,45 +1,50 @@
-package email
+package parse
 
 import (
 	"strings"
+
+	"github.com/monopolly/email"
+	"github.com/monopolly/email/tools"
 )
 
-func parseText(source string, options *Options) (marked string, imagelist []*File) {
+func parseText(source string, options *Options) (marked string, imagelist []*email.File) {
 
 	marked = source
 	options.Log("parse text")
 
 	//remove html tags
-	marked = deleteHTMLTags(marked)
+	marked = tools.DeleteHTMLTags(marked)
 
 	//get links
-	links := Links(marked)
+	links := tools.Links(marked)
 	if links == nil && len(marked) < options.MaxTextLen {
+		// короткий текст без ссылок не переписываем, только убираем лишние пустые строки
+		marked = strings.TrimSpace(tools.RemoveRepeatedEmptyLines(marked, 1))
 		return
 	}
 
 	options.Log("links found", len(links))
 
 	//delete relative links
-	marked = deleteAllRelativeLinks(marked)
+	marked = tools.DeleteRelativeLinks(marked)
 	if options.Debug {
 		options.Save("removerelative.md", marked)
 	}
 
 	//clean
 	options.Log("clean")
-	marked = cleanText(marked)
+	marked = tools.CleanText(marked)
 	if options.Debug {
 		options.Save("clean_text.md", marked)
 	}
 
 	// remove repeat lines
-	marked = removeRepeatedEmptyLines(marked, 0)
+	marked = tools.RemoveRepeatedEmptyLines(marked, 1)
 	if options.Debug {
 		options.Save("remove_repeated_lines.md", marked)
 	}
 
-	images := make(map[string]*File)
+	images := make(map[string]*email.File)
 
 	//delete image links
 	//if options.html {
@@ -48,7 +53,7 @@ func parseText(source string, options *Options) (marked string, imagelist []*Fil
 		images = downloadImages(links, options)
 		options.Log("images count", len(images))
 		for link, img := range images {
-			marked = deleteLinkFromText(marked, link)
+			marked = tools.DeleteLink(marked, link)
 			imagelist = append(imagelist, img)
 		}
 		if options.Debug {
@@ -58,7 +63,7 @@ func parseText(source string, options *Options) (marked string, imagelist []*Fil
 
 	// fix md
 	options.Log("fix links")
-	marked = fixMarkdownLinks(marked)
+	marked = tools.FixMarkdownLinks(marked)
 	if options.Debug {
 		options.Save("fixMDlinks.md", marked)
 	}
@@ -104,7 +109,7 @@ func parseText(source string, options *Options) (marked string, imagelist []*Fil
 		options.Save("trimspace.md", marked)
 	}
 
-	marked = retext(marked)
+	marked = tools.Retext(marked)
 	if options.Debug {
 		options.Save("retext.md", marked)
 	}

@@ -1,9 +1,9 @@
-package email
+package tools
 
 import "strings"
 
 // clean html tags in text, a, h1 ,etc
-func deleteHTMLTags(s string) (res string) {
+func DeleteHTMLTags(s string) (res string) {
 	res = s
 
 	//links

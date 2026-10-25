@@ -1,8 +1,8 @@
-package email
+package tools
 
 import "strings"
 
-func isImageLink(link string) (res bool) {
+func IsImageLink(link string) (res bool) {
 	if !strings.Contains(link, "http") {
 		return
 	}

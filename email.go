@@ -2,11 +2,8 @@ package email
 
 import (
 	"bytes"
-	"crypto/sha1"
-	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"math/rand"
 	"net/mail"
 	"net/url"
 	"path/filepath"
@@ -18,6 +15,8 @@ import (
 	"github.com/monopolly/errors"
 	"github.com/monopolly/file"
 	"github.com/monopolly/filetype"
+
+	"github.com/monopolly/email/tools"
 )
 
 func New() (a *Constructor) {
@@ -29,26 +28,25 @@ func New() (a *Constructor) {
 }
 
 type Email struct {
-	ID          string          `json:",omitempty"`
-	From        mail.Address    `json:",omitempty"`
-	To          mail.Address    `json:",omitempty"`
-	Date        *time.Time      `json:",omitempty"`
-	Subj        string          `json:",omitempty"`
-	BCC         []*mail.Address `json:",omitempty"`
-	CC          []*mail.Address `json:",omitempty"`
-	Forward     []*mail.Address `json:",omitempty"`
-	Text        string          `json:",omitempty"`
-	Markdown    string          `json:",omitempty"`
-	HTML        string          `json:",omitempty"`
-	Signature   []string        `json:",omitempty"`
-	Inline      []*File         `json:",omitempty"`
-	Files       []*File         `json:",omitempty"`
-	Images      []*File         `json:",omitempty"`
-	IP          string          `json:",omitempty"`
-	Unsubscribe *url.URL        `json:",omitempty"` //link
-	ParserHTML  bool            `json:",omitempty"` //html or text
-	Options     *Options        `json:",omitempty"` //html or text
-	EML         []byte          `json:",omitempty"` //html or text
+	ID          string          `json:"id,omitempty"`
+	From        mail.Address    `json:"from,omitempty"`
+	To          mail.Address    `json:"to,omitempty"`
+	Date        *time.Time      `json:"date,omitempty"`
+	Subj        string          `json:"subj,omitempty"`
+	BCC         []*mail.Address `json:"bcc,omitempty"`
+	CC          []*mail.Address `json:"cc,omitempty"`
+	Forward     []*mail.Address `json:"forward,omitempty"`
+	Text        string          `json:"text,omitempty"`
+	Markdown    string          `json:"markdown,omitempty"`
+	HTML        string          `json:"html,omitempty"`
+	Signature   []string        `json:"signature,omitempty"`
+	Inline      []*File         `json:"inline,omitempty"`
+	Files       []*File         `json:"files,omitempty"`
+	Images      []*File         `json:"images,omitempty"`
+	IP          string          `json:"ip,omitempty"`
+	Unsubscribe *url.URL        `json:"unsubscribe,omitempty"` //link
+	ParserHTML  bool            `json:"parserhtml,omitempty"`  //html or text
+	EML         []byte          `json:"eml,omitempty"`         //html or text
 }
 
 func Unpack(b []byte) (a Email, err error) {
@@ -57,11 +55,11 @@ func Unpack(b []byte) (a Email, err error) {
 }
 
 func (a *Email) DomainFrom() (domain string) {
-	return domainonly(a.From.Address)
+	return tools.Domain(a.From.Address)
 }
 
 func (a *Email) DomainTo() (domain string) {
-	return domainonly(a.To.Address)
+	return tools.Domain(a.To.Address)
 }
 
 func (a *Email) CCList() (res []string) {
@@ -106,136 +104,91 @@ func (a *Email) Valid() (err errors.E) {
 }
 
 func (a *Email) AddFile(filename, contentType string, body []byte, size ...int) {
-	id := sid(body)
-	for _, x := range a.Files {
-		if x.ID == id {
-			return
-		}
-	}
 	s := len(body)
 	if len(size) > 0 {
 		s = size[0]
 	}
-
-	a.Files = append(a.Files, &File{ID: id, Name: filename, Body: body, Type: contentType, Size: s})
+	addFile(&a.Files, &File{ID: tools.SHA1(body), Name: filename, Body: body, Type: contentType, Size: s})
 }
 func (a *Email) AddFileModel(v *File) {
-	v.ID = sid(v.Body)
-	for _, x := range a.Files {
-		if x.ID == v.ID {
-			return
-		}
-	}
+	v.ID = tools.SHA1(v.Body)
 	v.Size = len(v.Body)
-	a.Files = append(a.Files, v)
+	addFile(&a.Files, v)
 }
 func (a *Email) AddImageModel(v *File) {
-	v.ID = sid(v.Body)
-	for _, x := range a.Images {
-		if x.ID == v.ID {
-			return
-		}
-	}
+	v.ID = tools.SHA1(v.Body)
 	v.Size = len(v.Body)
-	a.Images = append(a.Images, v)
+	addFile(&a.Images, v)
 }
 
 func (a *Email) AddInlineModel(v *File) {
-	v.ID = sid(v.Body)
-	for _, x := range a.Inline {
-		if x.ID == v.ID {
-			return
-		}
-	}
+	v.ID = tools.SHA1(v.Body)
 	v.Size = len(v.Body)
-	a.Inline = append(a.Inline, v)
+	addFile(&a.Inline, v)
 }
 
 func (a *Email) AddImage(filename, contentType string, body []byte, size ...int) {
-	id := sid(body)
-	for _, x := range a.Images {
-		if x.ID == id {
-			return
-		}
-	}
 	s := len(body)
 	if len(size) > 0 {
 		s = size[0]
 	}
-
-	a.Images = append(a.Images, &File{ID: id, Name: filename, Body: body, Type: contentType, Size: s})
+	addFile(&a.Images, &File{ID: tools.SHA1(body), Name: filename, Body: body, Type: contentType, Size: s})
 }
 
 func (a *Email) AddInline(filename, contentType string, body []byte) {
-	id := sid(body)
-	for _, x := range a.Inline {
-		if x.ID == id {
-			return
-		}
-	}
-	a.Inline = append(a.Inline, &File{ID: id, Name: filename, Body: body, Type: contentType})
+	addFile(&a.Inline, &File{ID: tools.SHA1(body), Name: filename, Body: body, Type: contentType})
 }
 
 func (a *Email) AddFiles(filename ...string) {
 	for _, x := range filename {
-		b, err := file.Open(x)
+		f, err := openFile(x)
 		if err != nil {
 			fmt.Println("File error", err)
 			continue
 		}
-		id := sid(b)
-		for _, x := range a.Files {
-			if x.ID == id {
-				continue
-			}
-		}
-
-		name := filepath.Base(x)
-		types, _ := filetype.Detect(b)
-		a.Files = append(a.Files, &File{ID: id, Name: name, Body: b, Type: types, Size: len(b)})
+		addFile(&a.Files, f)
 	}
 }
 
 func (a *Email) AddImages(filename ...string) {
 	for _, x := range filename {
-		b, err := file.Open(x)
+		f, err := openFile(x)
 		if err != nil {
 			fmt.Println("File error", err)
 			continue
 		}
-		id := sid(b)
-		for _, x := range a.Images {
-			if x.ID == id {
-				continue
-			}
-		}
-
-		name := filepath.Base(x)
-		types, _ := filetype.Detect(b)
-		a.Images = append(a.Images, &File{ID: id, Name: name, Body: b, Type: types, Size: len(b)})
+		addFile(&a.Images, f)
 	}
 }
 
 func (a *Email) AddInlines(filename ...string) {
 	for _, x := range filename {
-		b, err := file.Open(x)
+		f, err := openFile(x)
 		if err != nil {
-			//fmt.Println("File error", err)
 			continue
 		}
-
-		id := sid(b)
-		for _, x := range a.Inline {
-			if x.ID == id {
-				continue
-			}
-		}
-
-		name := filepath.Base(x)
-		types, _ := filetype.Detect(b)
-		//fmt.Println(name, types)
-		a.Inline = append(a.Inline, &File{ID: id, Name: name, Body: b, Type: types})
+		f.Size = 0
+		addFile(&a.Inline, f)
 	}
+}
+
+// addFile добавляет файл, если файла с таким же содержимым (ID) в списке ещё нет
+func addFile(list *[]*File, f *File) {
+	for _, x := range *list {
+		if x.ID == f.ID {
+			return
+		}
+	}
+	*list = append(*list, f)
+}
+
+func openFile(path string) (*File, error) {
+	b, err := file.Open(path)
+	if err != nil {
+		return nil, err
+	}
+	types, _ := filetype.Detect(b)
+	return &File{ID: tools.SHA1(b), Name: filepath.Base(path), Body: b, Type: types, Size: len(b)}, nil
 }
 
 type File struct {
@@ -248,6 +201,7 @@ type File struct {
 	Inline bool   `json:"inline,omitempty"`
 	Image  bool   `json:"image,omitempty"`
 	Link   string `json:"link,omitempty"` //origin link
+	CID    string `json:"cid,omitempty"`  //Content-ID inline файла; в html: src="cid:..."
 }
 
 type Constructor struct {
@@ -281,8 +235,11 @@ func (a *Constructor) CC(email string, name ...string) *Constructor {
 	return a
 }
 
-func (a *Constructor) Subj(v string, args ...interface{}) *Constructor {
-	a.m.Subj = fmt.Sprintf(v, args...)
+func (a *Constructor) Subj(v string, args ...any) *Constructor {
+	if len(args) > 0 {
+		v = fmt.Sprintf(v, args...)
+	}
+	a.m.Subj = v
 	return a
 }
 
@@ -291,9 +248,14 @@ func (a *Constructor) Signature(lines ...string) *Constructor {
 	return a
 }
 
-func (a *Constructor) UnsibscribeLink(link *url.URL) *Constructor {
+func (a *Constructor) UnsubscribeLink(link *url.URL) *Constructor {
 	a.m.Unsubscribe = link
 	return a
+}
+
+// Deprecated: используйте UnsubscribeLink.
+func (a *Constructor) UnsibscribeLink(link *url.URL) *Constructor {
+	return a.UnsubscribeLink(link)
 }
 
 func (a *Constructor) From(email string, name ...string) *Constructor {
@@ -314,86 +276,23 @@ func (a *Constructor) HTML(v string) *Constructor {
 	return a
 }
 
-// sid возвращает content-id вложения.
-// sha1.Sum, а не общий hash.Hash: письма собираются параллельно,
-// общее состояние хэшера давало гонку и неверные cid.
-func sid(v []byte) string {
-	if v == nil {
-		return ""
-	}
-	sum := sha1.Sum(v)
-	return hex.EncodeToString(sum[:])
-}
-
 func (a *Constructor) AddFile(filename, contentType string, body []byte, size ...int) *Constructor {
-	id := sid(body)
-	for _, x := range a.m.Files {
-		if x.ID == id {
-			return a
-		}
-	}
-	s := len(body)
-	if len(size) > 0 {
-		s = size[0]
-	}
-
-	a.m.Files = append(a.m.Files, &File{ID: id, Name: filename, Body: body, Type: contentType, Size: s})
+	a.m.AddFile(filename, contentType, body, size...)
 	return a
 }
 
 func (a *Constructor) AddInline(filename, contentType string, body []byte) *Constructor {
-	id := sid(body)
-	for _, x := range a.m.Inline {
-		if x.ID == id {
-			return a
-		}
-	}
-	a.m.Inline = append(a.m.Inline, &File{ID: id, Name: filename, Body: body, Type: contentType})
+	a.m.AddInline(filename, contentType, body)
 	return a
 }
 
 func (a *Constructor) AddFiles(filename ...string) *Constructor {
-	for _, x := range filename {
-		b, err := file.Open(x)
-		if err != nil {
-			fmt.Println("File error", err)
-			continue
-		}
-		id := sid(b)
-		for _, x := range a.m.Files {
-			if x.ID == id {
-				continue
-			}
-		}
-
-		name := filepath.Base(x)
-		types, _ := filetype.Detect(b)
-		//fmt.Println(name, types)
-		a.m.Files = append(a.m.Files, &File{ID: id, Name: name, Body: b, Type: types, Size: len(b)})
-	}
+	a.m.AddFiles(filename...)
 	return a
 }
 
 func (a *Constructor) AddInlines(filename ...string) *Constructor {
-	for _, x := range filename {
-		b, err := file.Open(x)
-		if err != nil {
-			//fmt.Println("File error", err)
-			continue
-		}
-
-		id := sid(b)
-		for _, x := range a.m.Inline {
-			if x.ID == id {
-				continue
-			}
-		}
-
-		name := filepath.Base(x)
-		types, _ := filetype.Detect(b)
-		//fmt.Println(name, types)
-		a.m.Inline = append(a.m.Inline, &File{ID: id, Name: name, Body: b, Type: types})
-	}
+	a.m.AddInlines(filename...)
 	return a
 }
 
@@ -401,29 +300,23 @@ func (a *Constructor) Done() *Email {
 	return a.m
 }
 
-func domainonly(email string) (domain string) {
-	i := strings.Index(email, "@")
-	if i == -1 {
-		return email
-	}
-	domain = email[i+1:]
-	domain = strings.TrimSpace(domain)
-	domain = strings.ToLower(domain)
-	return
-}
-
 func (a *Email) Render() (res bytes.Buffer) {
 
-	domain := domainonly(a.From.Address)
+	domain := tools.Domain(a.From.Address)
+
+	date := time.Now()
+	if a.Date != nil {
+		date = *a.Date
+	}
 
 	/* id */
 	if a.ID == "" {
-		a.ID = fmt.Sprintf("<%d@%d.%s>", a.Date.Unix(), rand.Intn(999), domain)
+		a.ID = fmt.Sprintf("<%d.%s@%s>", date.Unix(), tools.RandomID(), domain)
 	}
 
 	/* mail mimes */
 	b := enmime.Builder().
-		Date(*a.Date).
+		Date(date).
 		Header("Message-Id", a.ID).
 		From(a.From.Name, a.From.Address).
 		To(a.To.Name, a.To.Address).
@@ -464,9 +357,15 @@ func (a *Email) Render() (res bytes.Buffer) {
 		b = b.AddAttachment(x.Body, x.Type, x.Name)
 	}
 
-	/* inline */
+	/* inline: в html на файл ссылаются как src="cid:<CID или ID>" */
 	for _, x := range a.Inline {
-		cid := fmt.Sprintf("<cid.%d@inline.%d.%s>", rand.Int63(), rand.Intn(999), domain)
+		cid := x.CID
+		if cid == "" {
+			cid = x.ID
+		}
+		if cid == "" {
+			cid = tools.SHA1(x.Body)
+		}
 		b = b.AddInline(x.Body, x.Type, x.Name, cid)
 	}
 

@@ -1,4 +1,4 @@
-package email
+package tools
 
 import (
 	"bytes"
@@ -8,7 +8,7 @@ import (
 	"unicode"
 )
 
-func fixMarkdownLinks(text string) (res string) {
+func FixMarkdownLinks(text string) (res string) {
 
 	var lines []string
 	for _, i := range strings.Split(text, "\n") {

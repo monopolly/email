@@ -5,60 +5,64 @@ import (
 	"fmt"
 	"net/mail"
 	"strings"
-	"unicode/utf8"
 
 	"github.com/jhillyerd/enmime/v2"
 	"github.com/monopolly/filetype"
-	"golang.org/x/net/html/charset"
-	"golang.org/x/text/encoding/charmap"
+
+	"github.com/monopolly/email/tools"
+	"github.com/monopolly/email/utf"
 )
 
-func ParseRawEmail(raw []byte) (r *Email, err error) {
+func Parse(raw []byte) (r *Email, err error) {
 
 	var namecount int
 	pp := enmime.NewParser()
-	en, er := pp.ReadEnvelope(bytes.NewBuffer(raw))
-	if er != nil {
-		return
-	}
-
-	// subj charset
-	subj := en.GetHeader("Subject")
-	if !utf8.ValidString(subj) {
-		subj = utf8convert(subj)
+	en, err := pp.ReadEnvelope(bytes.NewBuffer(raw))
+	if err != nil {
+		return nil, err
 	}
 
 	r = &Email{
-		Subj:        subj,
-		Text:        en.Text,
-		HTML:        en.HTML,
-		Unsubscribe: ParseUnsubscribeLink(en.GetHeader("List-Unsubscribe")),
+		ID:          en.GetHeader("Message-Id"),
+		Subj:        utf.Fix(en.GetHeader("Subject")),
+		Text:        utf.Fix(en.Text, tools.PartCharset(en, "text/plain")),
+		HTML:        utf.Fix(en.HTML, tools.PartCharset(en, "text/html")),
+		Unsubscribe: tools.ParseUnsubscribeLink(en.GetHeader("List-Unsubscribe")),
+	}
+
+	if date, err := en.Date(); err == nil {
+		r.Date = &date
 	}
 
 	froms, _ := en.AddressList("From")
 	if len(froms) > 0 {
 		r.From = *froms[0]
+		r.From.Name = utf.Fix(r.From.Name)
 		r.From.Address = strings.ToLower(r.From.Address)
 	}
 
 	tos, _ := en.AddressList("To")
 	if len(tos) > 0 {
 		r.To = *tos[0]
+		r.To.Name = utf.Fix(r.To.Name)
 		r.To.Address = strings.ToLower(r.To.Address)
 	}
+
+	r.CC = tools.AddressList(en, "Cc")
+	r.BCC = tools.AddressList(en, "Bcc")
 
 	hasAddress := map[string]bool{}
 	// X-Forwarded-To: lava.mobi@gmail.com
 	// X-Forwarded-For: vostorgbt.krl@gmail.com lava.mobi@gmail.com
 	// Delivered-To: lava.mobi@gmail.com
+	// In-Reply-To и References не адреса, а Message-Id писем (<id@host>)
 	for _, tag := range []string{
 		"X-Forwarded-To", "X-Forwarded-For", "Delivered-To",
-		"In-Reply-To", "X-Original-To", "X-Loop", "References", "Resent-To", "Resent-Cc", "Resent-Bcc"} {
+		"X-Original-To", "X-Loop", "Resent-To", "Resent-Cc", "Resent-Bcc"} {
 
 		// mine
 		t := en.GetHeader(tag)
 		if t != "" {
-			t = strings.ReplaceAll(t, tag, "")
 			t = strings.ReplaceAll(t, ",", " ")
 			t = strings.ReplaceAll(t, ";", " ")
 			t = strings.ToLower(t)
@@ -84,7 +88,9 @@ func ParseRawEmail(raw []byte) (r *Email, err error) {
 
 		f := new(File)
 		f.Type = x.ContentType
-		f.Name = x.FileName
+		f.Name = utf.Fix(x.FileName)
+		f.CID = x.ContentID
+		f.Inline = true
 		f.Body = x.Content
 		f.Size = len(f.Body)
 
@@ -110,7 +116,8 @@ func ParseRawEmail(raw []byte) (r *Email, err error) {
 
 		f := new(File)
 		f.Type = x.ContentType
-		f.Name = x.FileName
+		f.Name = utf.Fix(x.FileName)
+		f.CID = x.ContentID
 		f.Body = x.Content
 		f.Size = len(f.Body)
 
@@ -129,18 +136,5 @@ func ParseRawEmail(raw []byte) (r *Email, err error) {
 		}
 	}
 
-	return
-}
-
-func utf8convert(text string) (res string) {
-	_, nn, _ := charset.DetermineEncoding([]byte(text), "")
-
-	switch nn {
-	case "windows-1252":
-		d := charmap.Windows1251.NewDecoder()
-		res, _ = d.String(text)
-	default:
-		res = text
-	}
 	return
 }

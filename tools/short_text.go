@@ -1,4 +1,4 @@
-package email
+package tools
 
 import (
 	"strings"
@@ -9,7 +9,10 @@ some words with lower case
 other words with lower case,
 or...
 */
-func shortText(s string, words int) (res string) {
+func ShortText(s string, words int) (res string) {
+	if words <= 0 {
+		return s
+	}
 
 	count := 0
 	var lines []string
@@ -20,11 +23,18 @@ func shortText(s string, words int) (res string) {
 			count = count + c
 			continue
 		}
-		if len(lines) > 0 {
-			lines[len(lines)-1] = lines[len(lines)-1] + "..."
-			break
+
+		// первая же строка длиннее лимита — режем её по словам
+		if len(strings.Join(lines, "")) == 0 {
+			lines = []string{strings.Join(strings.Fields(i)[:words], " ")}
 		}
 
+		// "..." ставим к последней непустой строке
+		for len(lines) > 0 && strings.TrimSpace(lines[len(lines)-1]) == "" {
+			lines = lines[:len(lines)-1]
+		}
+		lines[len(lines)-1] = lines[len(lines)-1] + "..."
+		break
 	}
 	return strings.Join(lines, "\n")
 }

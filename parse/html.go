@@ -1,13 +1,13 @@
-package email
+package parse
 
 import (
-	"bytes"
-
-	"github.com/PuerkitoBio/goquery"
 	"github.com/k3a/html2text"
 
 	//md "github.com/JohannesKaufmann/html-to-markdown"
 	"github.com/monopolly/markdown"
+
+	"github.com/monopolly/email"
+	"github.com/monopolly/email/tools"
 )
 
 func parseHTML(html string, options *Options) (res string, err error) {
@@ -53,7 +53,7 @@ func parseHTML(html string, options *Options) (res string, err error) {
 	// 			}
 
 	// 			// if options.NoImages {
-	// 			// 	if isImageLink(link, options) {
+	// 			// 	if tools.IsImageLink(link, options) {
 	// 			// 		return md.String("")
 	// 			// 	}
 	// 			// }
@@ -90,48 +90,9 @@ func parseHTML(html string, options *Options) (res string, err error) {
 
 }
 
-func parseSimple(r *Email, options *Options) {
+func parseSimple(r *email.Email, options *Options) {
 	text := html2text.HTML2TextWithOptions(string(r.HTML), html2text.WithListSupport(), html2text.WithUnixLineBreaks())
-	r.Markdown = cleanText(text)
-}
-
-func LinksHTML(htmlsource string) (list []string) {
-	doc, err := goquery.NewDocumentFromReader(bytes.NewBuffer([]byte(htmlsource)))
-	if err != nil {
-		return
-	}
-	doc.Find("a[href]").Each(func(index int, item *goquery.Selection) {
-		link, _ := item.Attr("href")
-		list = append(list, link)
-	})
-	return
-}
-
-func ImageLinks(htmlsource string) (list []string) {
-	doc, err := goquery.NewDocumentFromReader(bytes.NewBuffer([]byte(htmlsource)))
-	if err != nil {
-		return
-	}
-
-	un := map[string]bool{}
-	doc.Find("img[src]").Each(func(index int, item *goquery.Selection) {
-		link, _ := item.Attr("src")
-		if un[link] {
-			return
-		}
-		list = append(list, link)
-	})
-
-	for _, link := range LinksHTML(htmlsource) {
-		if isImageLink(link) {
-			if un[link] {
-				continue
-			}
-			list = append(list, link)
-		}
-	}
-
-	return
+	r.Markdown = tools.CleanText(text)
 }
 
 // func Markdown(htmlsource string) {

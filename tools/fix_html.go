@@ -1,47 +1,40 @@
-package email
+package tools
 
 import (
+	"regexp"
 	"strings"
 )
 
-func htmlfix(html string, options *Options) (res string) {
+var (
+	// <meta charset="..."> и <meta http-equiv="Content-Type" content="text/html; charset=...">
+	charsetDecl = regexp.MustCompile(`(?i)(<meta[^>]*?charset\s*=\s*["']?\s*)[a-z0-9_:.\-]+`)
+	headOpen    = regexp.MustCompile(`(?i)<head(\s[^>]*)?>`)
+	htmlOpen    = regexp.MustCompile(`(?i)<html(\s[^>]*)?>`)
+)
+
+// FixHTMLCharset помечает html как utf-8: сам текст к этому моменту уже в utf-8 (ToUTF8)
+func FixHTMLCharset(html string) (res string) {
 
 	res = html
 	res = strings.TrimSpace(res)
 	if len(res) < 20 {
-		options.Log("html too short")
 		return
 	}
 
-	if strings.Contains(strings.ToLower(res), `utf-8`) {
-		options.Log("html has utf8")
-		return
+	// объявленная кодировка (windows-1251 и т.п.) больше не соответствует тексту
+	if charsetDecl.MatchString(res) {
+		return charsetDecl.ReplaceAllString(res, "${1}utf-8")
 	}
 
-	//html
-	if !strings.Contains(res, "<html") {
-		res = `<!DOCTYPE html><html><head><meta charset="utf-8"></head><body>` + res + "</body></html>"
-		return
+	const meta = `<meta charset="utf-8">`
+
+	if loc := headOpen.FindStringIndex(res); loc != nil {
+		return res[:loc[1]] + meta + res[loc[1]:]
 	}
 
-	i := strings.Index(res, "<head>")
-	switch i > 0 {
-	case true:
-		i = i + 6
-		res = res[:i] + `<meta charset="utf-8">` + res[i:]
-	default:
-		i = strings.Index(res, "<html")
-		if i < 0 {
-			break
-		}
-		end := strings.Index(res[i:], ">")
-		if end == -1 {
-			return `<html><head><meta charset="utf-8"></head><body>` + res + "</body></html>" //invalid
-		}
-		x := i + end
-		res = res[:x] + `<head><meta charset="utf-8"></head>` + res[x:]
-
+	if loc := htmlOpen.FindStringIndex(res); loc != nil {
+		return res[:loc[1]] + "<head>" + meta + "</head>" + res[loc[1]:]
 	}
 
-	return
+	return `<!DOCTYPE html><html><head>` + meta + `</head><body>` + res + "</body></html>"
 }

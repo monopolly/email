@@ -1,10 +1,10 @@
-package email
+package tools
 
 import (
 	"strings"
 )
 
-func isHTML(s string) (res bool) {
+func IsHTML(s string) (res bool) {
 
 	switch {
 	case

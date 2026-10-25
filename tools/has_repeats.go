@@ -1,4 +1,6 @@
-package email
+package tools
+
+import "unicode/utf8"
 
 // ---------------------------
 func HasRepeats(s string) (res bool) {
@@ -6,9 +8,9 @@ func HasRepeats(s string) (res bool) {
 		return false
 	}
 
-	first := s[0]
+	first, _ := utf8.DecodeRuneInString(s)
 	for _, x := range s {
-		if x != rune(first) {
+		if x != first {
 			return
 		}
 	}

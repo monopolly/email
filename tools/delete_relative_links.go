@@ -1,4 +1,4 @@
-package email
+package tools
 
 import (
 	"strings"
@@ -6,7 +6,7 @@ import (
 
 // only http* links
 // no apple.com
-func deleteAllRelativeLinks(text string) (res string) {
+func DeleteRelativeLinks(text string) (res string) {
 
 	//fmt.Println("delete relative links")
 	res = text

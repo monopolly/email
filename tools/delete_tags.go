@@ -1,4 +1,4 @@
-package email
+package tools
 
 func deleteTags(html []byte, tagStart, tagEnd string) []byte {
 

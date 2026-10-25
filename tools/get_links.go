@@ -1,4 +1,4 @@
-package email
+package tools
 
 import (
 	"net/url"
